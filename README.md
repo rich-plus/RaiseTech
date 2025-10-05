@@ -1,2 +1,2 @@
 # RaiseTech
-This GitHub is for learning purposes at RaiseTech.
+This is the GitHub repository for assignments at RaiseTech.
