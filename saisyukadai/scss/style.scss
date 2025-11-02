@@ -7,17 +7,17 @@
 // ==================================================
 //  Foundation
 // ==================================================
-@forward "foundation/mixin";
-@forward "foundation/variable";
-@forward "foundation/base";
+@use "foundation/mixin" as *;
+@use "foundation/variables" as *;
+@use "foundation/base" as *;
 
 // ==================================================
 //  Layout
 // ==================================================
-@forward "layout/header";
-@forward "layout/sidemenu";
-@forward "layout/main";
-@forward "layout/footer";
+@use "layout/header" as *;
+@use "layout/sidemenu" as *;
+@use "layout/main" as *;
+@use "layout/footer" as *;
 
 // ==================================================
 //  Object
@@ -25,18 +25,18 @@
 // -------------------------------------------------
 //  Component
 // -------------------------------------------------
-// @forward "object/component/button";
-// @forward "object/component/grid";
+@use "object/component/button" as *;
+@use "object/component/grid" as *;
 
 // // -------------------------------------------------
 // //  Project
 // // -------------------------------------------------
-// @forward "object/project/copyright";
-// @forward "object/project/gmenu";
-// @forward "object/project/hamburger";
-// @forward "object/project/mainvisual";
+@use "object/project/header" as *;
+@use "object/project/search-form" as *;
+// @use "object/project/hamburger" as *;
+// @use "object/project/mainvisual" as *;
 
 // // -------------------------------------------------
 // //  Utility
 // // -------------------------------------------------
-// @forward "object/utility/display";
+// @use "object/utility/display" as *;
