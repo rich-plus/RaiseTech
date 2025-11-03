@@ -2,18 +2,17 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  position: relative;
+.l-header {
+  width: calc(100vw - 368px);
 }
 
-.l-header {
-  width: 100%;
+.l-container {
+  display: flex;
+  background-color: #FFFDFA;
 }
 
 .l-aside {
-  position: fixed;
-  top: 0;
-  right: 0;
+  width: 368px;
 }
 
 .p-header {
@@ -22,6 +21,7 @@ body {
   align-items: center;
   background-color: #FFF7EF;
   padding: 65px 31px 65px 65px;
+  height: 217px;
 }
 .p-header__logo img {
   width: 325px;
