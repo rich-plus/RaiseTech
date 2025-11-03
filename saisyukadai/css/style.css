@@ -3,10 +3,12 @@ html {
 }
 
 .l-header {
-  width: calc(100vw - 368px);
+  height: 217px;
+  position: relative;
+  z-index: 10;
 }
 
-.l-container {
+.l-wrapper {
   display: flex;
   background-color: #FFFDFA;
 }
