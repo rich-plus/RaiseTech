@@ -34,8 +34,11 @@
 // // -------------------------------------------------
 @use "object/project/header" as *;
 @use "object/project/search-form" as *;
-// @use "object/project/hamburger" as *;
-// @use "object/project/mainvisual" as *;
+@use "object/project/takeout" as *;
+@use "object/project/eatin" as *;
+@use "object/project/access" as *;
+@use "object/project/aside" as *;
+@use "object/project/footer" as *;
 
 // // -------------------------------------------------
 // //  Utility

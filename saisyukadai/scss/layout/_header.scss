@@ -1,5 +1,6 @@
+@use '../foundation/variables' as *;
+
 .l-header {
   height: 217px;
-  position: relative;
-  z-index: 10;
+  background-color: $color-bg-header;
 }

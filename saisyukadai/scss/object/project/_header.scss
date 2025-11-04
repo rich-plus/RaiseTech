@@ -4,35 +4,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-bg-header;
-  padding: 65px 31px 65px 65px;
-  height: 217px;
+  padding: 65px 2% 65px 4.2%;
+  box-sizing: border-box;
+
+  &__logo {
+    width: 100%;
+  }
 
   &__logo img {
-    width: 325px;
-    height: 75px;
+    width: 20.9%;
+    min-width: 203px;
   }
 
 }
 
-.p-search-form {
-  display: flex;
-  align-items: center;
-
-  &__label {
-    display: flex;
-    align-items: center;
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  &__input {
-    width: 396px;
-    height: 46px;
-    border: 1px solid $color-border-light;
-    border-radius: 10px;
-    background: $color-bg-white url("../../../images/header/search.png") no-repeat left 12px center;}
-}
