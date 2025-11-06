@@ -3,8 +3,7 @@
 .p-search-form {
   display: flex;
   align-items: center;
-  width: 35.2%;
-  min-width: 318px;
+  width: 546px;
 
   &__label {
     display: flex;
@@ -12,19 +11,21 @@
   }
 
   &__input {
-    width: 72.5%;
-    min-width: 216px;
+    width: 396px;
     height: 46px;
     border: 1px solid $color-border-light;
     border-radius: 10px;
     background: $color-bg-white url("../../../images/header/search.png") no-repeat left 12px center;
-    background-size: 6% auto;
+    background-size: 24px 24px;
 
   }
 
   &__button {
-    width: 24.9%;
-    min-width: 90px;
+    border: 1px solid $color-border-light;
+    background: linear-gradient(90deg, $color-bg-button 0%, $color-bg-button2 100%);
+    width: 136px;
     height: 46px;
+    border-radius: 10px;
+    margin-left: 14px;
   }
 }

@@ -4,16 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   padding: 65px 2% 65px 4.2%;
   box-sizing: border-box;
 
-  &__logo {
-    width: 100%;
-  }
-
   &__logo img {
-    width: 20.9%;
-    min-width: 203px;
+    width: 325px;
+    height: 84px;
   }
 
 }
