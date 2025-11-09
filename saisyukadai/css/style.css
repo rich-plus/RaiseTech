@@ -2,8 +2,20 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "M PLUS 1p", "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #3C2A10;
+  background-color: #FFFDFA;
+}
+
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .l-header {
@@ -19,10 +31,6 @@ ul {
   width: 80.8%;
 }
 
-.l-main {
-  background-color: #FFFDFA;
-}
-
 .l-aside {
   width: 19.2%;
   background-color: #F2EDE9;
@@ -30,6 +38,7 @@ ul {
 
 .l-footer {
   width: 100%;
+  height: 150px;
 }
 
 .c-button {
@@ -101,7 +110,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 5.5%;
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: #FFFFFF;
   font-weight: bold;
   transform: translateY(-50%);
@@ -136,21 +145,41 @@ ul {
 }
 .p-takeout__title {
   position: absolute;
-  top: 50%;
-  left: 5.5%;
-  font-size: 2.5rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  transform: translateY(-50%);
+  top: 24px;
+  left: 10px;
+  font-size: 8rem;
+  color: #EAEAEA;
+  font-family: Roboto;
+  font-weight: 700;
+}
+.p-takeout__title::after {
+  content: "";
+  display: block;
+  margin-top: 43px;
+  left: 17.5px;
+  width: 63px;
+  height: 4px;
+  background-color: #FFFFFF;
 }
 .p-takeout__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: absolute;
-  top: 50%;
-  left: 5.5%;
-  font-size: 2.5rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  transform: translateY(-50%);
+  top: 839px;
+  padding: 0 16px;
+}
+.p-takeout__item {
+  height: 162px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+}
+.p-takeout__subtitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.p-takeout__text {
+  margin-top: 5px;
 }
 
 .p-eatin {
@@ -175,28 +204,121 @@ ul {
 }
 .p-eatin__title {
   position: absolute;
-  top: 50%;
-  left: 5.5%;
-  font-size: 2.5rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  transform: translateY(-50%);
+  top: 24px;
+  left: 10px;
+  font-size: 8rem;
+  color: #EAEAEA;
+  font-family: Roboto;
+  font-weight: 700;
+}
+.p-eatin__title::after {
+  content: "";
+  display: block;
+  margin-top: 43px;
+  left: 17.5px;
+  width: 63px;
+  height: 4px;
+  background-color: #FFFFFF;
 }
 .p-eatin__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: absolute;
-  top: 50%;
-  left: 5.5%;
-  font-size: 2.5rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  transform: translateY(-50%);
+  top: 839px;
+  padding: 0 16px;
+}
+.p-eatin__item {
+  height: 162px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+}
+.p-eatin__subtitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.p-eatin__text {
+  margin-top: 5px;
 }
 
-.p-access__img {
-  width: 50px;
-}
-
-.p-footer__img {
+.p-access {
+  position: relative;
   width: 100%;
+  height: 649px;
+  background-image: url("../../../images/top/access.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.p-access::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5071);
+  z-index: 1;
+}
+.p-access__inner {
+  position: relative;
+  width: 61%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2855);
+  padding: 86px 134px 75px 119px;
+  z-index: 2;
+}
+.p-access__title {
+  position: absolute;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.p-access__title::after {
+  content: "";
+  display: block;
+  margin-top: 50.5px;
+  width: 75px;
+  height: 2px;
+  background-color: #FFFFFF;
+}
+.p-access__text {
+  height: 50%;
+  margin-top: 162px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+
+.p-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../images/footer/footer.png");
+  background-size: cover;
+}
+.p-footer__nav-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 41px;
+  font-size: 2rem;
+}
+.p-footer__nav-list a {
+  color: #FFFFFF;
+}
+.p-footer__nav-list li::after {
+  content: "|";
+  margin: 0 8px;
+  color: #FFFFFF;
+}
+.p-footer__nav-list li:last-child::after {
+  content: "";
+}
+.p-footer__copy {
+  font-size: 1.4rem;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

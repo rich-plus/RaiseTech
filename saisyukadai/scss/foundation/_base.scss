@@ -1,10 +1,21 @@
-// ----------------------------------------
-//  1. html / body 基本設定
-// ----------------------------------------
+@use '../foundation/variables' as *;
+
 html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: 'M PLUS 1p','Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-text;
+  background-color: $color-bg-base;
+}
+
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
