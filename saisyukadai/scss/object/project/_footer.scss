@@ -15,19 +15,24 @@
     justify-content: center;
     margin-top: 41px;
     font-size: 2rem;
+  }
 
-    a {
-      color: $color-text-white;
-    }
+  &__item {
 
-    li::after {
+    &::after {
       content: '|';
       margin: 0 8px;
       color: $color-text-white;
     }
-    li:last-child::after {
+
+    &:last-child::after {
       content: '';
     }
+
+  }
+
+  &__link {
+    color: $color-text-white;
   }
 
   &__copy {

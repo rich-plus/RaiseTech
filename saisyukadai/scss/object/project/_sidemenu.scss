@@ -1,0 +1,38 @@
+@use '../../foundation/variables' as *;
+
+.p-sidemenu {
+  display: flex;
+  flex-direction: column;
+  color: $color-text-light;
+  padding: 84px 46px;
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 90px;
+  }
+
+  &__category {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+}
+
+.p-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+  padding-left: 20px;
+
+  &__link {
+    font-size: 2rem;
+  }
+}

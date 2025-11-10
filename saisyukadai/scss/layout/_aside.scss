@@ -1,6 +1,7 @@
 @use '../foundation/variables' as *;
 
 .l-aside {
-  width: 19.2%;
+  width: 100%;
+  max-width: 368px;
   background-color: $color-bg-aside;
 }
