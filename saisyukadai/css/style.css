@@ -34,8 +34,7 @@ a {
 }
 
 .l-aside {
-  width: 100%;
-  max-width: 368px;
+  width: 368px;
   background-color: #F2EDE9;
 }
 
@@ -59,8 +58,8 @@ a {
   box-sizing: border-box;
 }
 .p-header__logo img {
-  width: 325px;
-  height: 84px;
+  width: clamp(203px, 16.93vw, 325px);
+  height: auto;
 }
 
 .p-search-form {
@@ -121,15 +120,18 @@ a {
 
 .p-menu-container {
   display: flex;
-  gap: 81px;
+  gap: clamp(42px, 4.21vw, 81px);
   margin: 0;
-  padding: 120px 120px 130px;
+  padding-top: clamp(41px, 6.25vw, 120px);
+  padding-inline: clamp(41px, 6.25vw, 120px);
+  padding-bottom: clamp(41px, 6.77vw, 130px);
 }
 
 .p-takeout {
   position: relative;
   width: 100%;
-  height: 1197px;
+  aspect-ratio: 1197/616;
+  min-height: 642px;
   overflow: hidden;
 }
 .p-takeout__inner {
@@ -152,7 +154,7 @@ a {
   left: 10px;
   font-size: 8rem;
   color: #EAEAEA;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 .p-takeout__title::after {
@@ -211,7 +213,7 @@ a {
   left: 10px;
   font-size: 8rem;
   color: #EAEAEA;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 .p-eatin__title::after {

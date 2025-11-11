@@ -3,7 +3,8 @@
 .p-takeout {
   position: relative;
   width: 100%;
-  height: 1197px;
+  aspect-ratio: 1197 / 616;
+  min-height: 642px;
   overflow: hidden;
   
   &__inner {
@@ -26,7 +27,7 @@
     left: 10px;
     font-size: 8rem;
     color: $color-text-takeout-title;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
   }
 

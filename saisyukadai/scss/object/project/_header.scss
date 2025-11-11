@@ -9,8 +9,8 @@
   box-sizing: border-box;
 
   &__logo img {
-    width: 325px;
-    height: 84px;
+    width: clamp(203px, 16.93vw, 325px);
+    height: auto;
   }
 
 }
