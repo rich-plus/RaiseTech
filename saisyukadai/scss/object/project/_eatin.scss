@@ -3,7 +3,8 @@
 .p-eatin {
   position: relative;
   width: 100%;
-  height: 1197px;
+  aspect-ratio: 616 / 1197;
+  min-height: 681px;
   overflow: hidden;
   
   &__inner {

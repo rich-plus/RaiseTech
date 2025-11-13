@@ -10,3 +10,12 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin fontsize($size) {
+  font-size: $size + px;
+  font-size: ($size / 16) * 1rem;
+}
+
+@mixin font-responsive($min-px, $vw, $max-px) {
+  font-size: clamp(#{$min-px / 16}rem, #{$vw}vw, #{$max-px / 16}rem);
+}

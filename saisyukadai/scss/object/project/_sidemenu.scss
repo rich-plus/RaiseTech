@@ -3,8 +3,11 @@
 .p-sidemenu {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background-color: $color-bg-aside;
   color: $color-text-light;
   padding: 84px 46px;
+
 
   &__title {
     font-family: 'Roboto', sans-serif;

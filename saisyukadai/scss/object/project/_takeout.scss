@@ -1,10 +1,11 @@
+@use '../../foundation/mixin' as *;
 @use '../../foundation/variables' as *;
 
 .p-takeout {
   position: relative;
   width: 100%;
-  aspect-ratio: 1197 / 616;
-  min-height: 642px;
+  aspect-ratio: 616 / 1197;
+  min-height: 681px;
   overflow: hidden;
   
   &__inner {
@@ -25,7 +26,7 @@
     position: absolute;
     top: 24px;
     left: 10px;
-    font-size: 8rem;
+    @include font-responsive(44, 4, 80);
     color: $color-text-takeout-title;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;

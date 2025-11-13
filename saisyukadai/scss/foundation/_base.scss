@@ -1,13 +1,12 @@
+@use '../foundation/mixin' as *;
 @use '../foundation/variables' as *;
 
-html {
-  font-size: 62.5%;
-}
+
 
 body {
-  font-family: 'M PLUS 1p','Roboto', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: $fontBase;
+  @include fontsize(16);
+  font-weight: $regular;
   color: $color-text;
   background-color: $color-bg-base;
 }
