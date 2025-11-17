@@ -9,7 +9,7 @@
 // ==================================================
 @use "foundation/mixin" as *;
 @use "foundation/variables" as *;
-@use "foundation/base" as *;
+@use "foundation/base"as *;
 
 // ==================================================
 //  Layout
@@ -26,23 +26,14 @@
 // -------------------------------------------------
 //  Component
 // -------------------------------------------------
-@use "object/component/button" as *;
-@use "object/component/grid" as *;
+@use "object/component" as *;
 
-// // ----s---------------------------------------------
+// // -------------------------------------------------
 // //  Project
 // // -------------------------------------------------
-@use "object/project/header" as *;
-@use "object/project/search-form" as *;
-@use "object/project/main-visual" as *;
-@use "object/project/menu-container" as *;
-@use "object/project/takeout" as *;
-@use "object/project/eatin" as *;
-@use "object/project/access" as *;
-@use "object/project/sidemenu" as *;
-@use "object/project/footer" as *;
+@use "object/project" as *;
 
 // // -------------------------------------------------
 // //  Utility
 // // -------------------------------------------------
-// @use "object/utility/display" as *;
+// @use "object/utility/display";

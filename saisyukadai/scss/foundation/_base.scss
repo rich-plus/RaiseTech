@@ -1,14 +1,14 @@
-@use '../foundation/mixin' as *;
-@use '../foundation/variables' as *;
+@use '../foundation/mixin' as m;
+@use '../foundation/variables' as vars;
 
 
 
 body {
-  font-family: $fontBase;
-  @include fontsize(16);
-  font-weight: $regular;
-  color: $color-text;
-  background-color: $color-bg-base;
+  font-family: vars.$fontBase;
+  @include m.font-size(16);
+  font-weight: vars.$regular;
+  color: vars.$color-text;
+  background-color: vars.$color-bg-base;
 }
 
 ul {

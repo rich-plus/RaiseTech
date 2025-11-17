@@ -1,5 +1,7 @@
-@use '../../foundation/mixin' as *;
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use '../component';
+
 
 .p-takeout {
   position: relative;
@@ -26,10 +28,9 @@
     position: absolute;
     top: 24px;
     left: 10px;
-    @include font-responsive(44, 4, 80);
-    color: $color-text-takeout-title;
+    color: vars.$color-text-takeout-title;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    @extend .c-font-heading--top-xl;
   }
 
   &__title::after {
@@ -39,7 +40,7 @@
     left: 17.5px;
     width: 63px;
     height: 4px;
-    background-color: $color-border-white;
+    background-color: vars.$color-border-white;
   }
 
   &__content {
@@ -53,7 +54,7 @@
 
   &__item {
     height: 162px;
-    background-color: rgba($color-bg-white, 0.8);
+    background-color: rgba(vars.$color-bg-white, 0.8);
     padding: 16px;
   }
 

@@ -1,4 +1,5 @@
 @use '../../foundation/variables' as *;
+@use '../component' as *;
 
 .p-main-visual {
   position: relative;
@@ -24,9 +25,7 @@
     position: absolute;
     top: 50%;
     left: 5.5%;
-    font-size: 4rem;
     color: $color-text-white;
-    font-weight: bold;
     transform: translateY(-50%);
   }
 }

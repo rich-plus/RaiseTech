@@ -1,9 +1,10 @@
+@use '../foundation/mixin' as m;
+
 // ========================================
 //  Font Family
 // ========================================
 $fontBase: 'M PLUS 1p','Roboto', sans-serif;
 $fontRoboto: 'Roboto', sans-serif;
-$fontMPlus1p: 'M PLUS 1p', sans-serif;
 
 // ========================================
 //  Font Weight
