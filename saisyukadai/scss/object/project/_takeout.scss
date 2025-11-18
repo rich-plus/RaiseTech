@@ -1,7 +1,6 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
-@use '../component';
-
+@use '../component' as *;
 
 .p-takeout {
   position: relative;
@@ -28,9 +27,10 @@
     position: absolute;
     top: 24px;
     left: 10px;
-    color: vars.$color-text-takeout-title;
-    font-family: 'Roboto', sans-serif;
-    @extend .c-font-heading--top-xl;
+    color: vars.$color-text-accent;
+    .c-font-heading--top-xl {
+      font-family: vars.$fontAccent;
+    }
   }
 
   &__title::after {

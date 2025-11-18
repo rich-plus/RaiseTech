@@ -31,7 +31,6 @@
     //Heading TOP size M (30→36px)
     &--top-m {
       @include m.font-size(30);
-
       @include m.mq(desktop) {
         @include m.font-clamp-desktop(30, 36);
       }
@@ -50,6 +49,7 @@
     //Heading Standard size L (36→60px)
     &--standard-l {
       @include m.font-clamp-mobile(36, 60);
+      font-family: vars.$fontAccent;
     }
 
     //Heading Standard size M (28→36px)

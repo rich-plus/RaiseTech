@@ -4,7 +4,7 @@
 //  Font Family
 // ========================================
 $fontBase: 'M PLUS 1p','Roboto', sans-serif;
-$fontRoboto: 'Roboto', sans-serif;
+$fontAccent: 'Roboto', sans-serif;
 
 // ========================================
 //  Font Weight
@@ -19,11 +19,11 @@ $bold: 700;
 // ----------------------------------------
 //  Text Colors
 // ----------------------------------------
-$color-text : #3C2A10; // メインテキスト
-$color-text-light : #707070; // サブテキスト
-$color-text-takeout-title : #EAEAEA; // Takeoutタイトル
+$color-text-base : #3C2A10; // メインテキスト
 $color-text-white : #FFFFFF; //白文字
-$color-text-accent : #4A6C9B; // 出典リンク
+$color-text-muted : #707070; // サブテキスト
+$color-text-accent : #EAEAEA; // Takeoutタイトル
+$color-text-link : #4A6C9B; // 出典リンク
 
 // ----------------------------------------
 //  Background Colors

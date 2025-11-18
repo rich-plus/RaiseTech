@@ -41,7 +41,7 @@ a {
 .c-font-heading {
   font-weight: 700;
 }
-.c-font-heading--top-xl, .p-takeout__title {
+.c-font-heading--top-xl {
   font-size: clamp(
     41px,
     calc(1.6268843537rem + 0.7653061224vw),
@@ -49,7 +49,7 @@ a {
   );
 }
 @media screen and ( min-width: 1024px ) {
-  .c-font-heading--top-xl, .p-takeout__title {
+  .c-font-heading--top-xl {
     font-size: clamp(
     44px,
     calc(0.0446428571rem + 4.0178571429vw),
@@ -96,6 +96,7 @@ a {
     calc(0.5564081633rem + 6.1224489796vw),
     60px
   );
+  font-family: "Roboto", sans-serif;
 }
 .c-font-heading--standard-m {
   font-size: clamp(
@@ -267,6 +268,8 @@ a {
   top: 24px;
   left: 10px;
   color: #EAEAEA;
+}
+.p-takeout__title .c-font-heading--top-xl {
   font-family: "Roboto", sans-serif;
 }
 .p-takeout__title::after {
@@ -325,7 +328,7 @@ a {
   top: 24px;
   left: 10px;
   font-size: 8rem;
-  color: #EAEAEA;
+  color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }

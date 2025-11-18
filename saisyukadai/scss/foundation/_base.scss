@@ -7,7 +7,7 @@ body {
   font-family: vars.$fontBase;
   @include m.font-size(16);
   font-weight: vars.$regular;
-  color: vars.$color-text;
+  color: vars.$color-text-base;
   background-color: vars.$color-bg-base;
 }
 
