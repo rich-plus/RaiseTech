@@ -31,11 +31,12 @@ $breakpoints: (
 //  自動 clamp 生成（スマホ）
 // ----------------------------------------
 
+//$property - font-size / margin / padding / width / gap など
 //$min-px - 最小サイズ（px）
 //$max-px - 最大サイズ（px）
 //$min-vw - 最小画面幅（vw）デフォルト 375
 //$max-vw - 最大画面幅（vw）デフォルト 767
-@mixin font-clamp-mobile($min-px, $max-px, $min-vw: 375, $max-vw: 767) {
+@mixin clamp-mobile($property, $min-px, $max-px, $min-vw: 375, $max-vw: 767) {
   // 差分計算
   $diff-px: $max-px - $min-px;
   $diff-vw: $max-vw - $min-vw;
@@ -48,22 +49,22 @@ $breakpoints: (
   $intercept-rem: math.div($min-px * 16, $min-vw) - $intercept-vw * math.div(16, $min-vw);
 
   // clamp生成
-  font-size: clamp(
+  #{$property}: clamp(
     #{$min-px}px,
     calc(#{$intercept-rem}rem + #{$slope * 100}vw),
     #{$max-px}px
   );
 }
-
 // ----------------------------------------
 //  自動 clamp 生成（PC）
 // ----------------------------------------
 
+//$property - font-size / margin / padding / width / gap など
 //$min-px - 最小サイズ（px）
 //$max-px - 最大サイズ（px）
 //$min-vw - 最小画面幅（vw）デフォルト 1024
 //$max-vw - 最大画面幅（vw）デフォルト 1920
-@mixin font-clamp-desktop($min-px, $max-px, $min-vw: 1024, $max-vw: 1920) {
+@mixin clamp-desktop($property, $min-px, $max-px, $min-vw: 1024, $max-vw: 1920) {
   // 差分計算
   $diff-px: $max-px - $min-px;
   $diff-vw: $max-vw - $min-vw;
@@ -76,9 +77,39 @@ $breakpoints: (
   $intercept-rem: math.div($min-px * 16, $min-vw) - $intercept-vw * math.div(16, $min-vw);
 
   // clamp生成
-  font-size: clamp(
+  #{$property}: clamp(
     #{$min-px}px,
     calc(#{$intercept-rem}rem + #{$slope * 100}vw),
     #{$max-px}px
   );
 }
+
+
+//以下修正後削除
+// // ----------------------------------------
+// //  自動 clamp 生成（PC）
+// // ----------------------------------------
+
+// //$min-px - 最小サイズ（px）
+// //$max-px - 最大サイズ（px）
+// //$min-vw - 最小画面幅（vw）デフォルト 1024
+// //$max-vw - 最大画面幅（vw）デフォルト 1920
+// @mixin font-clamp-desktop($min-px, $max-px, $min-vw: 1024, $max-vw: 1920) {
+//   // 差分計算
+//   $diff-px: $max-px - $min-px;
+//   $diff-vw: $max-vw - $min-vw;
+
+//   // 1vw あたりの増加量(px)
+//   $slope: math.div($diff-px, $diff-vw);
+
+//   // clamp の「基点」になる intercept（rem）
+//   $intercept-vw: math.div($min-vw * $diff-px, $diff-vw);
+//   $intercept-rem: math.div($min-px * 16, $min-vw) - $intercept-vw * math.div(16, $min-vw);
+
+//   // clamp生成
+//   font-size: clamp(
+//     #{$min-px}px,
+//     calc(#{$intercept-rem}rem + #{$slope * 100}vw),
+//     #{$max-px}px
+//   );
+// }

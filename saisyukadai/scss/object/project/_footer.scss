@@ -22,7 +22,7 @@
     &::after {
       content: '|';
       margin: 0 8px;
-      color: $color-text-white;
+      color: $color-white;
     }
 
     &:last-child::after {
@@ -32,12 +32,12 @@
   }
 
   &__link {
-    color: $color-text-white;
+    color: $color-white;
   }
 
   &__copy {
     font-size: 1.4rem;
-    color: $color-text-white;
+    color: $color-white;
   }
 
 }

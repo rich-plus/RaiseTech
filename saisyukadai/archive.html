@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="RaiseTechの最終課題で作成するハンバーガーショップサイトです。">
   <title>最終課題 | Hamburger</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
   <link rel="icon" href="./images/favicon.png" type="image/png">
   <link href="./css/ress.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
@@ -22,7 +25,7 @@
       <header class="l-header">
         <div class="p-header">
           <a class="p-header__logo" href="/">
-            <img src="./images/header/logo.png" alt="ハンバーガーショップ">
+            <img src="./images/logo/logo.png" alt="ハンバーガーショップのホームへ">
           </a>
 
           <form class="p-search-form" action="#" method="get">
@@ -38,49 +41,77 @@
         <section class="p-hero">
           <div class="p-hero__inner">
             <h1 class="p-hero__title">Menu: <span>チーズバーガー</span></h1>
+            <picture>
+              <source srcset="./images/archive/archive--pc.jpg" media="( min-width: 1024px )">
+              <source srcset="./images/archive/archive--tb.jpg" media="( min-width: 768px )">
+              <img class="p-main-visual__img" src="./images/archive/archive--sp.jpg" alt="">
+            </picture>
           </div>
         </section>
 
         <section class="p-archive">
           <h2>小見出しが入ります</h2>
-          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <p>
+            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+          </p>
 
           <article class="p-archive-card">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button type="submit" class="c-button">詳しく見る</button>
+            <picture>
+              <source srcset="./images/archive/card--pc.jpg" media="( min-width: 1024px )">
+              <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
+              <img class="p-main-visual__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
+            </picture>
+            <div>
+              <h3>チーズバーガー</h3>
+              <h4>小見出しが入ります</h4>
+              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              <a href="/" class="c-button">詳しく見る</a>
+            </div>
           </article>
           <article class="p-archive-card">
-            <h3>ダブルチーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button type="submit" class="c-button">詳しく見る</button>
+            <picture>
+              <source srcset="./images/archive/card--pc.jpg" media="( min-width: 1024px )">
+              <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
+              <img class="p-main-visual__img" src="./images/archive/card--sp.jpg" alt="ダブルチーズバーガー">
+            </picture>
+            <div>
+              <h3>ダブルチーズバーガー</h3>
+              <h4>小見出しが入ります</h4>
+              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              <a href="/" class="c-button">詳しく見る</a>
+            </div>
           </article>
           <article class="p-archive-card">
-            <h3>スペシャルチーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button type="submit" class="c-button">詳しく見る</button>
+            <picture>
+              <source srcset="./images/archive/card--pc.jpg" media="( min-width: 1024px )">
+              <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
+              <img class="p-main-visual__img" src="./images/archive/card--sp.jpg" alt="スペシャルチーズバーガー">
+            </picture>
+            <div>
+              <h3>スペシャルチーズバーガー</h3>
+              <h4>小見出しが入ります</h4>
+              <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              <a href="/" class="c-button">詳しく見る</a>
+            </div>
           </article>
         </section>
 
         <nav class="p-pagination">
           <div class="p-pagination__inner">
-          <span class="p-pagenation__info">page 1 / 10</span>
-          <ul class="p-pagenation__list">
-            <li><a href="" aria-label="前のページ">&laquo;</a></li>
-            <li><a href="" aria-current="page">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-            <li><a href="">6</a></li>
-            <li><a href="">7</a></li>
-            <li><a href="">8</a></li>
-            <li><a href="">9</a></li>
-            <li><a href="" aria-label="後のページ">&raquo;</a></li>
-          </ul>
+            <span class="p-pagenation__info">page 1 / 10</span>
+            <ul class="p-pagenation__list">
+              <li><a href="" aria-label="前のページ">&laquo;</a></li>
+              <li><a href="" aria-current="page">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li><a href="">6</a></li>
+              <li><a href="">7</a></li>
+              <li><a href="">8</a></li>
+              <li><a href="">9</a></li>
+              <li><a href="" aria-label="後のページ">&raquo;</a></li>
+            </ul>
           </div>
         </nav>
       </main>

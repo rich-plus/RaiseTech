@@ -1,5 +1,11 @@
-@use '../foundation/variables' as *;
+@use '../foundation/mixin' as m;
+@use '../foundation/variables' as vars;
 
 .l-header {
-  aspect-ratio: 1553 / 217;
+  height: 215px;
+
+  @include m.mq() {
+    height: 217px;
+  }
+
 }

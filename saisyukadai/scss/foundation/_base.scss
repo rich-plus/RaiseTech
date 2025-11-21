@@ -7,8 +7,8 @@ body {
   font-family: vars.$fontBase;
   @include m.font-size(16);
   font-weight: vars.$regular;
-  color: vars.$color-text-base;
-  background-color: vars.$color-bg-base;
+  color: vars.$color-brown-900;
+  background-color: vars.$color-cream-50;
 }
 
 ul {

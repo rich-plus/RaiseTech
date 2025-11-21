@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="RaiseTechの最終課題で作成するハンバーガーショップサイトです。">
   <title>最終課題 | Hamburger</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
   <link rel="icon" href="./images/favicon.png" type="image/png">
   <link href="./css/ress.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
@@ -20,12 +23,12 @@
   <div class="l-wrapper">
     <div class="l-wrapper__inner">
       <header class="l-header">
-        <div class="p-header">
-          <a class="p-header__logo" href="/">
-            <img src="./images/header/logo.png" alt="ハンバーガーショップ">
+        <div class="c-header">
+          <a class="c-header__logo" href="/">
+            <img src="./images/logo/logo.png" alt="ハンバーガーショップ">
           </a>
 
-          <form class="p-search-form" action="#" method="get">
+          <form class="c-search-form" action="#" method="get">
             <label for="search" class="p-search-form__label">
             </label>
             <input type="search" id="search" name="s" class="p-search-form__input">
@@ -38,16 +41,23 @@
         <section class="p-main-visual">
           <div class="p-main-visual__inner">
             <h1 class="p-main-visual__title">ダミーサイト</h1>
-            <img class="p-main-visual__img" src="./images/top/mainvisual-pc.jpg" alt="ハンバーガーショップのメインビジュアル画像">
+            <picture>
+              <source srcset="./images/top/mv--pc.jpg" media="( min-width: 1024px )">
+              <source srcset="./images/top/mv--tb.jpg" media="( min-width: 768px )">
+              <img class="p-main-visual__img" src="./images/top/mv--sp.jpg" alt="ハンバーガーショップのメインビジュアル画像">
+            </picture>
           </div>
         </section>
 
         <div class="p-main-container">
           <section class="p-takeout">
             <div class="p-takeout__inner">
-              <h2 class="p-takeout__title">Take Out</h2>
-              <img class="p-takeout__img" src="./images/top/takeout-pc.jpg" alt="テイクアウトで利用できるメニューの写真">
-
+              <h2 class="p-takeout__title c-font-heading--top-xl">Take Out</h2>
+              <picture>
+                <source srcset="./images/top/takeout--pc.jpg" media="( min-width: 1024px )">
+                <source srcset="./images/top/takeout--tb.jpg" media="( min-width: 768px )">
+                <img class="p-takeout__img" src="./images/top/takeout--sp.jpg" alt="テイクアウトで利用できるメニューの写真">
+              </picture>
               <div class="p-takeout__content">
                 <div class="p-takeout__item">
                   <h3 class="p-takeout__subtitle">Take OUT</h3>
@@ -68,7 +78,11 @@
           <section class="p-eatin">
             <div class="p-eatin__inner">
               <h2 class="p-eatin__title">Eat In</h2>
-              <img class="p-eatin__img" src="./images/top/eatin-pc.jpg" alt="店内で注文できるメニューの写真">
+              <picture>
+                <source srcset="./images/top/eatin--pc.jpg" media="( min-width: 1024px )">
+                <source srcset="./images/top/eatin--tb.jpg" media="( min-width: 768px )">
+                <img class="p-eatin__img" src="./images/top/eatin--sp.jpg" alt="店内で注文できるメニューの写真">
+              </picture>
 
               <div class="p-eatin__content">
                 <div class="p-eatin__item">
@@ -90,10 +104,17 @@
 
         <section class="p-access">
           <div class="p-access__inner">
-            <h2 class="p-access__title">見出しが入ります</h2>
-            <p class="p-access__text">
-              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            </p>
+            <picture class="p-access__map">
+              <source srcset="./images/top/access--pc.jpg" media="(min-width: 1024px)">
+              <source srcset="./images/top/access--tb.jpg" media="(min-width: 768px)">
+              <img src="./images/top/access--sp.jpg" alt="店舗周辺の地図">
+            </picture>
+            <div>
+              <h2 class="p-access__title">見出しが入ります</h2>
+              <p class="p-access__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
           </div>
         </section>
       </main>

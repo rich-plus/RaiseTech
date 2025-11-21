@@ -2,6 +2,7 @@
 @use '../../foundation/variables' as vars;
 @use '../component' as *;
 
+
 .p-takeout {
   position: relative;
   width: 100%;
@@ -27,9 +28,9 @@
     position: absolute;
     top: 24px;
     left: 10px;
-    color: vars.$color-text-accent;
-    .c-font-heading--top-xl {
-      font-family: vars.$fontAccent;
+    color: vars.$color-gray-200;
+    &.c-font-heading--top-xl{
+    font-family: vars.$fontAccent;
     }
   }
 
@@ -40,7 +41,7 @@
     left: 17.5px;
     width: 63px;
     height: 4px;
-    background-color: vars.$color-border-white;
+    background-color: vars.$color-white;
   }
 
   &__content {
@@ -54,7 +55,7 @@
 
   &__item {
     height: 162px;
-    background-color: rgba(vars.$color-bg-white, 0.8);
+    background-color: rgba(vars.$color-white, 0.8);
     padding: 16px;
   }
 

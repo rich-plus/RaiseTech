@@ -1,0 +1,24 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+
+// ----------------------------------------
+//  Color Component（色セット定義）
+// ----------------------------------------
+
+.c-color {
+  &--text-primary { color: vars.$color-brown-900; }
+  &--text-secondary { color: vars.$color-gray-700; }
+  &--text-tertiary { color: vars.$color-gray-200; }
+  &--text-link { color: vars.$color-blue-700; }
+  &--text-white { color: vars.$color-white; }
+
+  &--bg-primary { background-color: vars.$color-cream-50; }
+  &--bg-aside { background-color: vars.$color-beige-100; }
+  &--bg-page { background-color: vars.$color-brown-800; }
+  &--bg-white { background-color: vars.$color-white; }
+
+  //以下修正後削除
+  // &--border-light { border-color: vars.$color-border-light; }
+  // &--border-white { border-color: vars.$color-border-white; }
+}

@@ -1,7 +1,11 @@
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
 
 .c-button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+
+
 }

@@ -17,28 +17,49 @@ $bold: 700;
 // ========================================
 
 // ----------------------------------------
+//  Brown / Orange 系統（メインカラー）
+// ----------------------------------------
+$color-brown-900 : #3C2A10; // メインテキスト
+$color-brown-800 : #3C2B1C; // ページネーション
+$color-cream-50 : #FFFDFA; //サイト全体の背景
+$color-cream-100 : #FFF7EF; //ヘッダー背景
+$color-beige-100 : #F2EDE9; //サブメニュー背景
+
+
+// ----------------------------------------
+//  Gray / Blue 系統
+// ----------------------------------------
+$color-gray-700 : #707070; // サブテキスト
+$color-gray-300 : #DED8D3; //ボタン背景
+$color-gray-200 : #EAEAEA; // Takeoutタイトル
+$color-blue-700 : #4A6C9B; // 出典リンク
+
+
+// ----------------------------------------
+//  白・黒
+// ----------------------------------------
+$color-white : #FFFFFF; //白文字
+$color-black : #000000; //黒背景
+
+//以下修正後削除
+// ----------------------------------------
 //  Text Colors
 // ----------------------------------------
-$color-text-base : #3C2A10; // メインテキスト
-$color-text-white : #FFFFFF; //白文字
-$color-text-muted : #707070; // サブテキスト
-$color-text-accent : #EAEAEA; // Takeoutタイトル
-$color-text-link : #4A6C9B; // 出典リンク
+// $color-text-base : #3C2A10; // メインテキスト
+// $color-text-white : #FFFFFF; //白文字
+// $color-text-muted : #707070; // サブテキスト
+// $color-link : #4A6C9B; // 出典リンク
 
 // ----------------------------------------
 //  Background Colors
 // ----------------------------------------
-$color-bg-base : #FFFDFA; //サイト全体の背景
-$color-bg-header : #FFF7EF; //ヘッダー背景
-$color-bg-aside : #F2EDE9; //サブメニュー背景
-$color-bg-white : #FFFFFF; //白背景
-$color-bg-black : #000000; //黒背景
-$color-bg-button : #F2EDE9; //ボタン背景
-$color-bg-button2 : #DED8D3; //ボタン背景
+// $color-bg-black : #000000; //黒背景
+// $color-bg-button : #F2EDE9; //ボタン背景
+// $color-bg-button2 : #DED8D3; //ボタン背景
 
-// ----------------------------------------
-//  Border Colors
-// ----------------------------------------
-$color-border-light : #707070;
-$color-border-white : #FFFFFF;
+// // ----------------------------------------
+// //  Border Colors
+// // ----------------------------------------
+// $color-border-light : #707070;
+// $color-border-white : #FFFFFF;
 

@@ -4,102 +4,108 @@
 .c-font {
 
   // ----------------------------------------
-  //  Heading（見出し）スマホ基準
+  //  Heading（見出し）
   // ----------------------------------------
 
-  &-heading {
+  &-h {
     font-weight: vars.$bold;
 
-    // ── TOPページ ─────────────────────
 
-    //Heading TOP size XL (41→44→80px)
-    &--top-xl {
-      @include m.font-clamp-mobile(41, 44);
+    //Heading size XL (41→44→80px) 
+    &--xl {
+      @include m.clamp-mobile(font-size, 41, 44);
+
       @include m.mq(desktop) {
-        @include m.font-clamp-desktop(44, 80);
+        @include m.clamp-desktop(font-size, 44, 80);
       }
     }
 
-    //Heading TOP size L (36→40px)
-    &--top-l {
-      @include m.font-size(36);
-      @include m.mq(desktop) {
-        @include m.font-clamp-desktop(36, 40);
-      }
-    }
-
-    //Heading TOP size M (30→36px)
-    &--top-m {
-      @include m.font-size(30);
-      @include m.mq(desktop) {
-        @include m.font-clamp-desktop(30, 36);
-      }
-    }
-
-    //Heading TOP size S (22→24px)
-    &--top-s {
-      @include m.font-clamp-mobile(22, 24);
-    }
-
-
-
-    // ── 標準サイズ ─────────────────────
-
-
-    //Heading Standard size L (36→60px)
-    &--standard-l {
-      @include m.font-clamp-mobile(36, 60);
+    //Heading size L (36→60px)
+    &--l {
+      @include m.clamp-mobile(font-size, 36, 60);
       font-family: vars.$fontAccent;
     }
 
-    //Heading Standard size M (28→36px)
-    &--standard-m {
-      @include m.font-clamp-mobile(28, 36);
-    }
+    //Heading size M (36→40px)
+    &--m {
+      @include m.font-size(36);
 
-    //Heading Standard size S (24→28px)
-    &--standard-s {
-      @include m.font-clamp-mobile(24, 28);
-    }
-
-    //Heading Standard size XS (20px)
-    &--standard-xs {
-      @include m.font-size(20);
-    }
-
-    //Heading Standard size XXS (16px)
-    &--standard-xxs {
-      @include m.font-size(16);
-    }
-
-
-    // ── 例外サイズ（カード・メニュー） ─────────────────────
-
-    //Heading Card size M (20→36px)
-    &--card-m {
-      @include m.font-size(20);
       @include m.mq(desktop) {
-        @include m.font-clamp-desktop(20, 36);
+        @include m.clamp-desktop(font-size, 36, 40);
       }
     }
 
-    //Heading Card size S (16→24px)
-    &--card-s {
+    //Heading size XXS (16px)
+    &--xxs {
       @include m.font-size(16);
+    }
+  }
+
+  // ----------------------------------------
+  //  SubHeading（小見出し）
+  // ----------------------------------------
+
+  &-subh {
+
+    //SubHeading size XL (30→36px)
+    &--xl {
+      @include m.font-size(30);
+
       @include m.mq(desktop) {
-        @include m.font-clamp-desktop(16, 24);
+        @include m.clamp-desktop(font-size, 30, 36);
       }
     }
 
-    //Heading Menu size M (20→34px)
-    &--menu-m {
-      @include m.font-clamp-mobile(20, 34);
+    //SubHeading size L (28→36px)
+    &--l {
+      @include m.clamp-mobile(font-size, 28, 36);
     }
 
-    //Heading Menu size S (24px)
-    &--menu-s {
-      @include m.font-size(24);
+    //SubHeading size M (24→28px)
+    &--m {
+      @include m.clamp-mobile(font-size, 24, 28);
     }
 
+    //SubHeading size S (22→24px)
+    &--s {
+      @include m.clamp-mobile(font-size, 22, 24);
+    }
+
+    //SubHeading size XS (20px)
+    &--xs {
+      @include m.font-size(20);
+    }
+
+  }
+
+  // ----------------------------------------
+  //  Text（本文）
+  // ----------------------------------------
+
+  &-text {
+
+    //Text size M (14→16px)
+
+    &--m {
+      font-weight: vars.$bold;
+      @include m.font-size(14);
+
+      @include m.mq(desktop) {
+        @include m.font-size(16);
+      }
+    }
+
+    //Text size S  (16→14→16px)
+    &--s {
+      @include m.font-size(16);
+
+      @include m.mq() {
+        @include m.font-size(14);
+      }
+
+      @include m.mq(desktop) {
+        @include m.font-size(16);
+      }
+    }
   }
 }
