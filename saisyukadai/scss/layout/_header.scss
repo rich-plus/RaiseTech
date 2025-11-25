@@ -2,10 +2,5 @@
 @use '../foundation/variables' as vars;
 
 .l-header {
-  height: 215px;
-
-  @include m.mq() {
-    height: 217px;
-  }
-
+  width: 100%;
 }

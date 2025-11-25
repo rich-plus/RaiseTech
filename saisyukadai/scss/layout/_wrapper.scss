@@ -1,11 +1,6 @@
-@use '../foundation/variables' as *;
+@use '../foundation/mixin' as m;
+@use '../foundation/variables' as vars;
 
 .l-wrapper {
   width: 100%;
-  display: flex;
-
-  &__inner {
-    width: 80.8%;
-    min-width: 0;
-  }
 }

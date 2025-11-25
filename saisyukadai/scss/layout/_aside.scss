@@ -2,5 +2,9 @@
 @use '../foundation/variables' as vars;
 
 .l-aside {
-  width: 19.16%;
+  width: 100%;
+  display: none;
+  @include m.mq( desktop) {
+    display: block;
+  }
 }

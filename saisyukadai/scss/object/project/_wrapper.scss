@@ -1,0 +1,7 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use '../component' as *;
+
+.p-wrapper {
+  flex: 8.08;
+}

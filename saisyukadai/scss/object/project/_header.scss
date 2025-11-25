@@ -1,9 +1,12 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
-.c-header {
+.p-header {
   width: 100%;
-  height: 100%;
+  height: 215px;
+  @include m.mq() {
+    height: 217px;
+  }
   box-sizing: border-box;
   background-color: vars.$color-cream-100;
 

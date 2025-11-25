@@ -1,56 +1,91 @@
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use '../component' as *;
 
 .p-access {
   position: relative;
   width: 100%;
-  aspect-ratio: 1553 / 649;
-  background-image: url("../../../images/top/access.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 
-  &::after {
-    content:'';
+  @include m.clamp-mobile-reverse(height, 691, 415);
+
+  @include m.mq(desktop) {
+    @include m.clamp-desktop(height, 415, 649);
+  }
+
+  &__bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color-black, 0.5071);
+    inset: 0;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
     z-index: 1;
   }
-  
+
   &__inner {
-    position: relative;
-    height: 100%;
-    aspect-ratio: 955 / 649;
-    background-color: rgba($color-black, 0.2855);
-    padding: 86px 134px 75px 119px;
+    position: absolute;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    // ----------------------------------------
+    // Mobile （上配置）
+    // ----------------------------------------
+
+    position: relative;
+    height: 60%;
+    @include m.clamp-mobile-reverse(padding-top, 42, 12);
+    @include m.clamp-mobile-reverse(padding-right, 40, 29);
+    @include m.clamp-mobile-reverse(padding-left, 40, 21);
+    gap: 14px;
+
+    // ----------------------------------------
+    // Tablet (右下配置）
+    // ----------------------------------------
+
+    @include m.mq() {
+      inset: auto 0 0 auto;
+      width: 97.5%;
+      height: 92.8%;
+    }
+
+    // ----------------------------------------
+    // Desktop (左配置）
+    // ----------------------------------------
+
+    @include m.mq(desktop) {
+      inset: 0 auto 0 0;
+      height: 100%;
+      width: 61.2%;
+      @include m.clamp-desktop(padding-top, 12, 86);
+      @include m.clamp-desktop(padding-right, 29, 134);
+      @include m.clamp-desktop(padding-left, 21, 119);
+      @include m.clamp-desktop(gap, 14, 58.5);
+    }
+
   }
 
   &__title {
-    position: absolute;
-    font-size: 3.6rem;
-    font-weight: 700;
-    color: $color-white;
+
+    &.c-underline::after {
+      height: 2px;
+      width: 75px;
+      margin-top: 15px;
+
+      @include m.mq(desktop) {
+        @include m.clamp-desktop(margin-top, 15, 50.5);
+      }
+    }
   }
 
-  &__title::after {
-    content: '';
-    display: block;
-    margin-top: 50.5px;
-    width: 75px;
-    height: 2px;
-    background-color: $color-white;
-  }
-
-  &__text {
-    height: 50%;
-    margin-top: 162px;
-    font-weight: 700;
-    line-height: 33px;
-    color: $color-white;
-  }
 
 }

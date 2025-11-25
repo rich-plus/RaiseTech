@@ -5,7 +5,7 @@
 // ==================================================
 
 // ==================================================
-//  Foundation
+//  Foundations
 // ==================================================
 @use "foundation/mixin" as *;
 @use "foundation/variables" as *;
@@ -14,8 +14,8 @@
 // ==================================================
 //  Layout
 // ==================================================
-@use "layout/header" as *;
 @use "layout/wrapper" as *;
+@use "layout/header" as *;
 @use "layout/main" as *;
 @use "layout/aside" as *;
 @use "layout/footer" as *;

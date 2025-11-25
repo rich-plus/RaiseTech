@@ -1,0 +1,13 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-underline {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: currentColor;// 親要素の文字色を継承
+  }
+}
