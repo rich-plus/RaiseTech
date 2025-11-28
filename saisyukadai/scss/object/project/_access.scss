@@ -5,11 +5,7 @@
 .p-access {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  height: auto;
-
   @include m.clamp-mobile-reverse(min-height, 691, 415);
-
   @include m.mq(desktop) {
     @include m.clamp-desktop(min-height, 415, 649);
   }
@@ -27,52 +23,61 @@
     }
   }
 
-  &__overlay {
+  &__overlay1 {
     position: absolute;
     inset: 0;
     z-index: 1;
   }
 
-  &__inner {
-    position: relative;
+  &__overlay2 {
+    // ----------------------------------------
+    // Mobile (上配置）
+    // ----------------------------------------
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 40%;
+    left: 0;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-
-    // ----------------------------------------
-    // Mobile （上配置）
-    // ----------------------------------------
-
-    height: 60%;
-    @include m.clamp-mobile-reverse(padding-top, 42, 12);
-    @include m.clamp-mobile-reverse(padding-right, 40, 29);
-    @include m.clamp-mobile-reverse(padding-left, 40, 21);
-    gap: 14px;
 
     // ----------------------------------------
     // Tablet (右下配置）
     // ----------------------------------------
+    @include m.mq() {
+      top: 30px;
+      bottom: 0;
+      left: 21px;
+    }
+
+    // // ----------------------------------------
+    // // Desktop (左配置）
+    // // ----------------------------------------
+    @include m.mq(desktop) {
+      top: 0;
+      left: 0;
+      right: 39.8%;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 42px 40px 57px 40px;
 
     @include m.mq() {
-      position: absolute;
-      inset: auto 0 0 auto;
-      width: 97.5%;
+      padding: 42px 29px 40px 42px;
     }
-
-    // ----------------------------------------
-    // Desktop (左配置）
-    // ----------------------------------------
 
     @include m.mq(desktop) {
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 61.2%;
-      @include m.clamp-desktop(padding-top, 12, 86);
-      @include m.clamp-desktop(padding-right, 29, 134);
-      @include m.clamp-desktop(padding-left, 21, 119);
       @include m.clamp-desktop(gap, 14, 58.5);
+      @include m.clamp-desktop(padding-top, 42, 86);
+      padding-right: 47.5%; 
+      @include m.clamp-desktop(padding-bottom, 40, 75);
+      @include m.clamp-desktop(padding-left, 42, 119);
     }
-
   }
 
   &__title {
@@ -87,6 +92,5 @@
       }
     }
   }
-
 
 }
