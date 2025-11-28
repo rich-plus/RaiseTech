@@ -1,42 +1,63 @@
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
 
 .p-sidemenu {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: $color-beige-100;
-  color: $color-gray-700;
-  padding: 84px 46px;
+  padding: 178px 20px 84px 46px;
 
-
-  &__title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3.4rem;
-    font-weight: 700;
-  }
-
-  &__list {
+  color: vars.$color-gray-700;
+  background-color: vars.$color-beige-100;
+  
+  @include m.mq(desktop) {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    margin-top: 90px;
+    gap: 90px;
+    padding: 84px 20px 84px 46px;
+  }
+
+  &__title {
+    font-family: vars.$fontAccent;
+    @include m.clamp-mobile(font-size, 20, 34);
+    font-weight: vars.$bold;
+    display: none;
+    @include m.mq(desktop) {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    @include m.clamp-mobile(gap, 48, 60);
+    @include m.mq(desktop) {
+      gap: 48px;
+    }
   }
 
   &__category {
-    font-size: 2.4rem;
-    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    @include m.clamp-mobile(gap, 32, 40);
+    @include m.mq(desktop) {
+      gap: 32px;
+    }  
+  }
+
+  &__item {
+    @include m.font-size(24);
+    font-weight: vars.$bold;
+  }
+
+  &__sub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 0 0 20px;
+  }
+
+  &__subitem {
+    @include m.font-size(20);
   }
 }
 
-.p-submenu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 32px;
-  padding-left: 20px;
-
-  &__link {
-    font-size: 2rem;
-  }
-}

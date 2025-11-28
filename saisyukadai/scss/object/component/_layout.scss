@@ -1,0 +1,44 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-layout {
+  &__wrapper {
+    width: 100%;
+
+    @include m.mq(desktop) {
+      flex: 8.08;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    @include m.clamp-mobile(padding-top, 20, 40);
+    @include m.clamp-mobile(padding-right, 20, 40);
+    @include m.clamp-mobile-reverse(padding-bottom, 49, 40);
+    @include m.clamp-mobile(padding-left, 20, 40);
+
+    @include m.mq() {
+      flex-direction: row;
+      @include m.clamp-desktop(gap, 41, 81);
+    }
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(padding-top, 40, 120);
+      @include m.clamp-desktop(padding-right, 40, 120);
+      @include m.clamp-desktop(padding-bottom, 40, 130);
+      @include m.clamp-desktop(padding-left, 40, 120);
+    }
+  }
+
+  &__aside {
+    display: none;
+
+    @include m.mq(desktop) {
+      display: block;
+      flex: 1.92;
+      min-width: 328px;
+    }
+  }
+}

@@ -1,43 +1,56 @@
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
 
 .p-footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 31px;
+  @include m.clamp-mobile-reverse(gap, 70, 44);
   width: 100%;
-  height: 150px;
+  min-height: 150px;
+  @include m.clamp-mobile(padding-top, 16, 30);
+  @include m.clamp-mobile(padding-bottom, 16, 24);
   background-image: url("../../../images/footer/footer.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include m.mq(desktop) {
+    @include m.clamp-desktop-reverse(gap, 44, 31);
+    @include m.clamp-desktop(padding-top, 30, 41);
+    @include m.clamp-desktop(padding-bottom, 24, 27);
+  }
 
   &__nav-list {
     display: flex;
     justify-content: center;
-    margin-top: 41px;
-    font-size: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    @include m.font-size(18);
+
+    @include m.mq() {
+      @include m.font-size(20);
+    }
   }
 
   &__item {
 
-    &::after {
+    &:not(:last-child)::after {
       content: '|';
       margin: 0 8px;
-      color: $color-white;
-    }
-
-    &:last-child::after {
-      content: '';
+      color: vars.$color-white;
     }
 
   }
 
   &__link {
-    color: $color-white;
+    color: vars.$color-white;
   }
 
   &__copy {
-    font-size: 1.4rem;
-    color: $color-white;
+    @include m.font-size(14);
+    color: vars.$color-white;
   }
 
 }

@@ -6,8 +6,6 @@
 .p-takeout {
   position: relative;
   width: 100%;
-  aspect-ratio: 616 / 1197;
-  min-height: 681px;
   overflow: hidden;
 
   &__inner {
@@ -26,8 +24,12 @@
 
   &__title {
     position: absolute;
-    top: 24px;
-    left: 10px;
+    top: 13px;
+    left: 13px;
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(top, 13, 24);
+    }
 
     &.c-underline::after {
       background-color: vars.$color-white;
@@ -42,15 +44,13 @@
     }
   }
 
-
-
   &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
     position: absolute;
-    top: 839px;
-    padding: 0 16px;
+    // top: 839px;
+    // padding: 0 16px;
   }
 
   &__item {

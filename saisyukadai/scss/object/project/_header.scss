@@ -2,25 +2,37 @@
 @use '../../foundation/variables' as vars;
 
 .p-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
   height: 215px;
+
+  @include m.mq(mobile) {
+    gap: 40px;
+  }  
+
   @include m.mq() {
     height: 217px;
   }
-  box-sizing: border-box;
-  background-color: vars.$color-cream-100;
-
-  display: flex;
-  align-items: center;
 
   @include m.mq(desktop) {
+    flex-direction: row;
     justify-content: space-between;
-    padding: 66px 31px 67px 65px;
+    gap: 65px;
+    padding: 31px;
   }
+
+  background-color: vars.$color-cream-100;
 
   &__logo img {
-    width: clamp(203px, 16.93vw, 325px);
-    height: auto;
-  }
+    width: 100%;
+    @include m.clamp-desktop(max-width, 203, 325);
 
+    @include m.mq(desktop) {
+      padding: 0 34px;
+    }
+  }
 }

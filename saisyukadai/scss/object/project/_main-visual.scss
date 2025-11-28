@@ -1,16 +1,21 @@
-@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
 @use '../component' as *;
 
 .p-main-visual {
   position: relative;
-  width: 100%;
-  aspect-ratio: 1553 / 530;
   overflow: hidden;
+  width: 100%;
+  height: 285px;
+  @include m.mq(desktop) {
+    @include m.clamp-desktop(height, 285, 530);
+  }
 
-  &__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  &__title {
+    position: absolute;
+    top: 50%;
+    @include m.clamp-desktop(left, 25, 86);
+    transform: translateY(-50%);
   }
 
   &__img {
@@ -19,12 +24,5 @@
     object-fit: cover;
     object-position: 50% 55%;
     display: block;
-  }
-
-  &__title {
-    position: absolute;
-    top: 50%;
-    left: 5.5%;
-    transform: translateY(-50%);
   }
 }

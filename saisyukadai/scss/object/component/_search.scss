@@ -1,0 +1,51 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include m.clamp-mobile(gap, 12, 14);
+  width: 100%;
+  @include m.clamp-mobile(max-width, 318, 546);
+
+  @include m.mq(mobile) {
+    flex-wrap: nowrap;
+  }
+
+  &__input {
+    width: 100%;
+    height: 46px;
+    color: vars.$color-gray-700;
+    font-weight: vars.$bold;
+    border: 1px solid vars.$color-gray-700;
+    border-radius: 10px;
+
+    //padding
+    @include m.clamp-mobile-reverse(padding-top, 11, 7);
+    padding-right: 12px;
+    @include m.clamp-mobile-reverse(padding-bottom, 11, 6);
+    @include m.clamp-mobile(padding-left, 49, 61);
+
+    //background
+    background-color: vars.$color-white;
+    background-image: url("../../../images/search/search.png");
+    background-repeat: no-repeat;
+    @include m.clamp-mobile(background-position-x, 5, 12);
+    background-position-y: center;
+    background-size: 24px 24px;
+  }
+
+  &__button {
+    flex-shrink: 0;
+    @include m.clamp-mobile(width, 90, 136);
+    height: 46px;
+
+    color: vars.$color-gray-700;
+    font-weight: vars.$bold;
+    border: 1px solid vars.$color-gray-700;
+    border-radius: 10px;
+    background: linear-gradient(90deg, vars.$color-beige-100 0%, vars.$color-gray-300 100%);
+  }
+}

@@ -3,4 +3,8 @@
 
 .l-wrapper {
   width: 100%;
+  display: block;
+  @include m.mq(desktop) {
+  display: flex;
+  }
 }

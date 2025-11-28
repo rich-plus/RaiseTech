@@ -9,6 +9,7 @@ body {
   font-weight: vars.$regular;
   color: vars.$color-brown-900;
   background-color: vars.$color-cream-50;
+  box-sizing: border-box;
 }
 
 ul {
