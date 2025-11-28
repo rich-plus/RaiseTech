@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     gap: 90px;
-    padding: 84px 20px 84px 46px;
+    padding-top: 84px;
+    @include m.clamp-desktop(padding-left, 20, 46);
   }
 
   &__title {

@@ -28,11 +28,11 @@
   background-color: vars.$color-cream-100;
 
   &__logo img {
-    width: 100%;
-    @include m.clamp-desktop(max-width, 203, 325);
+    width: 203px;
 
     @include m.mq(desktop) {
       padding: 0 34px;
+      @include m.clamp-desktop(width, 287, 325);
     }
   }
 }
