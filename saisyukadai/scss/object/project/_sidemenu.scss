@@ -8,7 +8,7 @@
 
   color: vars.$color-gray-700;
   background-color: vars.$color-beige-100;
-  
+
   @include m.mq(desktop) {
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@
     @include m.clamp-mobile(font-size, 20, 34);
     font-weight: vars.$bold;
     display: none;
+
     @include m.mq(desktop) {
       display: block;
     }
@@ -31,6 +32,7 @@
     display: flex;
     flex-direction: column;
     @include m.clamp-mobile(gap, 48, 60);
+
     @include m.mq(desktop) {
       gap: 48px;
     }
@@ -40,9 +42,10 @@
     display: flex;
     flex-direction: column;
     @include m.clamp-mobile(gap, 32, 40);
+
     @include m.mq(desktop) {
       gap: 32px;
-    }  
+    }
   }
 
   &__item {
@@ -55,10 +58,13 @@
     flex-direction: column;
     gap: 20px;
     padding: 0 0 0 20px;
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(padding-left, 0, 20);
+    }
   }
 
   &__subitem {
     @include m.font-size(20);
   }
 }
-

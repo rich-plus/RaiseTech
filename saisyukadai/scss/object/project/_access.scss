@@ -6,11 +6,12 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: auto;
 
-  @include m.clamp-mobile-reverse(height, 691, 415);
+  @include m.clamp-mobile-reverse(min-height, 691, 415);
 
   @include m.mq(desktop) {
-    @include m.clamp-desktop(height, 415, 649);
+    @include m.clamp-desktop(min-height, 415, 649);
   }
 
   &__bg {
@@ -22,6 +23,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -32,7 +34,7 @@
   }
 
   &__inner {
-    position: absolute;
+    position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -41,7 +43,6 @@
     // Mobile （上配置）
     // ----------------------------------------
 
-    position: relative;
     height: 60%;
     @include m.clamp-mobile-reverse(padding-top, 42, 12);
     @include m.clamp-mobile-reverse(padding-right, 40, 29);
@@ -53,9 +54,9 @@
     // ----------------------------------------
 
     @include m.mq() {
+      position: absolute;
       inset: auto 0 0 auto;
       width: 97.5%;
-      height: 92.8%;
     }
 
     // ----------------------------------------
@@ -63,8 +64,8 @@
     // ----------------------------------------
 
     @include m.mq(desktop) {
+      position: absolute;
       inset: 0 auto 0 0;
-      height: 100%;
       width: 61.2%;
       @include m.clamp-desktop(padding-top, 12, 86);
       @include m.clamp-desktop(padding-right, 29, 134);

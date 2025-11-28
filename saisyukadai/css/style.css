@@ -264,6 +264,7 @@ a {
   .c-layout__aside {
     display: block;
     flex: 1.92;
+    min-width: 230px;
   }
 }
 
@@ -336,6 +337,15 @@ a {
   border: 1px solid #707070;
   border-radius: 10px;
   background: linear-gradient(90deg, #F2EDE9 0%, #DED8D3 100%);
+}
+@media screen and ( min-width: 1024px ) {
+  .c-search__button {
+    width: clamp(
+    90px,
+    calc(2.3392857143rem + 5.1339285714vw),
+    136px
+  );
+  }
 }
 
 .c-underline {
@@ -509,7 +519,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
+  gap: 217px;
   width: 100%;
   min-height: clamp(
     642px,
@@ -598,7 +608,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
+  gap: 217px;
   width: 100%;
   min-height: clamp(
     642px,
@@ -686,7 +696,8 @@ a {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: clamp(
+  height: auto;
+  min-height: clamp(
     415px,
     calc(59.6894132653rem + -70.4081632653vw),
     691px
@@ -694,7 +705,7 @@ a {
 }
 @media screen and ( min-width: 1024px ) {
   .p-access {
-    height: clamp(
+    min-height: clamp(
     415px,
     calc(9.2232142857rem + 26.1160714286vw),
     649px
@@ -711,6 +722,8 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .p-access__overlay {
   position: absolute;
@@ -718,11 +731,10 @@ a {
   z-index: 1;
 }
 .p-access__inner {
-  position: absolute;
+  position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  position: relative;
   height: 60%;
   padding-top: clamp(
     12px,
@@ -743,15 +755,15 @@ a {
 }
 @media screen and ( min-width: 768px ) {
   .p-access__inner {
+    position: absolute;
     inset: auto 0 0 auto;
     width: 97.5%;
-    height: 92.8%;
   }
 }
 @media screen and ( min-width: 1024px ) {
   .p-access__inner {
+    position: absolute;
     inset: 0 auto 0 0;
-    height: 100%;
     width: 61.2%;
     padding-top: clamp(
     12px,
@@ -863,6 +875,15 @@ a {
   flex-direction: column;
   gap: 20px;
   padding: 0 0 0 20px;
+}
+@media screen and ( min-width: 1024px ) {
+  .p-sidemenu__sub-list {
+    padding-left: clamp(
+    0px,
+    calc(-1.4285714286rem + 2.2321428571vw),
+    20px
+  );
+  }
 }
 .p-sidemenu__subitem {
   font-size: 20px;
