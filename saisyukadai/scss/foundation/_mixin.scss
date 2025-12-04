@@ -108,3 +108,59 @@ $breakpoints: (
     #{$start-px}px
   );
 }
+
+// ----------------------------------------
+//  自動 clamp padding 生成（Mobile）375→767px
+// ----------------------------------------
+
+/// 1つの clamp 値を生成する関数
+@function fluid-mobile($start-px, $end-px) {
+  $slope: math.div($end-px - $start-px, 767 - 375);
+  $base: $start-px - $slope * 375;
+
+  @return clamp(#{$start-px}px, #{$base / 16}rem + #{$slope * 100}vw, #{$end-px}px);
+}
+
+/// 複数値対応 clamp
+@mixin clamp-mobile-multi($property, $mobile-values, $tablet-values) {
+  $mobile-list: if(type-of($mobile-values) == number, ($mobile-values), $mobile-values);
+  $tablet-list: if(type-of($tablet-values) == number, ($tablet-values), $tablet-values);
+
+  $result: ();
+
+  @for $i from 1 through length($mobile-list) {
+    $min: nth($mobile-list, $i);
+    $max: nth($tablet-list, $i);
+    $result: append($result, fluid-mobile($min, $max), space); 
+  }
+
+  #{$property}: $result;
+}
+
+// ----------------------------------------
+//  自動 clamp padding 生成（PC）1024→1920px
+// ----------------------------------------
+
+/// 1つの clamp 値を生成する関数
+@function fluid-desktop($start-px, $end-px) {
+  $slope: math.div($end-px - $start-px, 1920 - 1024);
+  $base: $start-px - $slope * 1024;
+
+  @return clamp(#{$start-px}px, #{$base / 16}rem + #{$slope * 100}vw, #{$end-px}px);
+}
+
+/// 複数値対応 clamp
+@mixin clamp-desktop-multi($property, $tablet-values, $desktop-values) {
+  $tablet-list: if(type-of($tablet-values) == number, ($tablet-values), $tablet-values);
+  $desktop-list: if(type-of($desktop-values) == number, ($desktop-values), $desktop-values);
+
+  $result: ();
+
+  @for $i from 1 through length($tablet-list) {
+    $min: nth($tablet-list, $i);
+    $max: nth($desktop-list, $i);
+    $result: append($result, fluid-desktop($min, $max), space); 
+  }
+
+  #{$property}: $result;
+}

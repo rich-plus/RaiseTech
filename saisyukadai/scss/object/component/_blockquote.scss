@@ -1,0 +1,19 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-blockquote {
+  display: flex;
+  flex-direction: column;
+  @include m.clamp-mobile(gap, 30, 61);
+  @include m.clamp-mobile-multi(padding, (30 16 27 20), (50 56 57 50));
+  background-color: vars.$color-gray-100;
+  @include m.mq(desktop) {
+    @include m.clamp-desktop(padding-left, 56, 60);
+    @include m.clamp-desktop-reverse(padding-bottom, 57, 47);
+  }
+
+  &__link {
+    color: vars.$color-blue-700;
+    text-decoration: underline;
+  }
+}

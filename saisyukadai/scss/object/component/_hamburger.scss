@@ -1,0 +1,58 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use "sass:math";
+
+$btnWidth: 45.25px;
+$btnHeight: 6px;
+
+.c-hamburger {
+  font-family: vars.$fontAccent;
+  @include m.clamp-mobile(font-size, 20, 34);
+  font-weight: vars.$bold;
+  color: vars.$color-gray-700;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  @include m.mq(mobile) {
+    @include m.clamp-mobile(top, 8, 20);
+    @include m.clamp-mobile(right, 8, 25);
+  }
+
+  @include m.mq(desktop) {
+    display: none;
+  }
+
+  &.is-open {
+    .c-hamburger__menu {
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: $btnWidth;
+      height: $btnHeight;
+      background: vars.$color-gray-700;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      display: block;
+      transition: transform 300ms ease-out;
+      z-index: 1500;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    > span {
+      background: none;
+    }
+  }
+}
+
+body.is-open {
+  overflow: hidden;
+}

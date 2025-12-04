@@ -1,8 +1,7 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
-@use '../component' as *;
 
-.p-main-visual {
+.c-main-visual {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -10,14 +9,7 @@
   @include m.mq(desktop) {
     @include m.clamp-desktop(height, 285, 530);
   }
-
-  &__title {
-    position: absolute;
-    top: 50%;
-    @include m.clamp-desktop(left, 25, 86);
-    transform: translateY(-50%);
-  }
-
+  
   &__img {
     width: 100%;
     height: 100%;
@@ -25,4 +17,12 @@
     object-position: 50% 55%;
     display: block;
   }
+  
+  &__title {
+    position: absolute;
+    top: 50%;
+    @include m.clamp-mobile(left, 25, 86);
+    transform: translateY(-50%);
+  }
+
 }

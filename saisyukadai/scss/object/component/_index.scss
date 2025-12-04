@@ -1,9 +1,30 @@
+// Base（基礎設定）
 @forward "font";
 @forward "color";
 @forward "layout";
 
+// Layout（ページ構成）
+@forward "header";
+@forward "main-visual";
+@forward "hero";
+@forward "sidemenu";
+@forward "footer";
+
+// UI Components（パーツ）
 @forward "search";
 @forward "underline";
-
 @forward "button";
 @forward "card";
+@forward "pagination";
+
+// Content Elements（コンテンツ要素）
+@forward "blockquote";
+@forward "media";
+@forward "grid";
+@forward "list";
+@forward "code";
+@forward "table";
+
+// Animation
+@forward "fade";
+@forward "hamburger";

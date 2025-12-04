@@ -2,10 +2,65 @@
 @use '../../foundation/variables' as vars;
 
 .c-button {
-  display: flex;
-  align-items: center;
+  flex-shrink: 0;
+  display: inline-flex;
   justify-content: center;
+  align-items: center;
+  font-weight: vars.$bold;
+
+  &--font-gray {
+    color: vars.$color-gray-700;
+  }
+
+  &--bg-grad {
+    border: 1px solid vars.$color-gray-700;
+    background: linear-gradient(90deg, vars.$color-beige-100 0%, vars.$color-gray-300 100%);
+  }
+
+  &--bg-white {
+    background-color: vars.$color-white;
+  }
 
 
+  &--normal {
+    @extend .c-button;
+    @extend .c-button--bg-grad;
+    border-radius: 20px;
+    aspect-ratio: 70 / 17;
+    @include m.mq(mobile) {      
+      @include m.clamp-mobile(width, 335, 429);
+      // @include m.clamp-mobile(height, 81, 104);
+    }
+  }
 
+  &--search {
+    @extend .c-button;
+    @extend .c-button--font-gray;
+    @extend .c-button--bg-grad;
+    border-radius: 10px;
+
+
+    @include m.clamp-mobile(width, 90, 136);
+    height: 46px;
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(width, 90, 136);
+    }
+  }
+
+  &--card {
+    @extend .c-button;
+    @extend .c-button--font-gray;
+    @extend .c-button--bg-white;
+    border-radius: 21px;
+    padding: 11px 42px 14px 41px;
+    line-height: vars.$lh-s;
+    text-align: center;
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(border-radius, 21, 38);
+      @include m.clamp-desktop-multi(padding, (11 42 14 41), (23 106 20 106));
+      @include m.clamp-desktop(line-height, 17, 33); //px指定
+    }
+  }
 }

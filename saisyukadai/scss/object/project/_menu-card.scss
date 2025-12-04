@@ -3,7 +3,7 @@
 @use '../component' as *;
 
 
-.p-eatin {
+.p-menu-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,18 +13,9 @@
   @include m.clamp-mobile(min-height, 642, 681);
   padding: 13px 16px 16px 16px;
 
-  background-image: url("../../../images/top/eatin--sp.jpg");
-  background-size: cover;
-  background-position: center;
-
-  @include m.mq() {
-    background-image: url("../../../images/top/eatin--tb.jpg");
-  }
-
   @include m.mq(desktop) {
-    @include m.clamp-mobile(min-height, 681, 1197);
+    @include m.clamp-desktop(min-height, 681, 1197);
     @include m.clamp-desktop(padding-top, 13, 24);
-    background-image: url("../../../images/top/eatin--pc.jpg");
   }
 
   &__title {
@@ -56,6 +47,36 @@
 
     @include m.mq(desktop) {
       @include m.clamp-desktop-reverse(margin-top, 16, 10);
+    }
+  }
+
+  &--takeout {
+    background-image: url("../../../images/top/takeout--sp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include m.mq() {
+      background-image: url("../../../images/top/takeout--tb.jpg");
+    }
+
+    @include m.mq(desktop) {
+      background-image: url("../../../images/top/takeout--pc.jpg");
+    }
+  }
+
+  &--eatin {
+    background-image: url("../../../images/top/eatin--sp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include m.mq() {
+      background-image: url("../../../images/top/eatin--tb.jpg");
+    }
+
+    @include m.mq(desktop) {
+      background-image: url("../../../images/top/eatin--pc.jpg");
     }
   }
 

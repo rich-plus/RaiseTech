@@ -2,7 +2,6 @@
 @use '../foundation/variables' as vars;
 
 
-
 body {
   font-family: vars.$fontBase;
   @include m.font-size(16);

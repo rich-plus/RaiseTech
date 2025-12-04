@@ -1,0 +1,29 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: vars.$color-white;
+
+  td {
+    height: 77px;
+    padding-block: 28px 24px;
+    @include m.clamp-mobile(padding-left, 23, 30);
+    border: 1px solid vars.$color-gray-700;
+
+    &:first-child {
+      @include m.clamp-mobile(width, 140, 215);
+      padding-block: 28px 24px;
+      @include m.clamp-mobile(padding-left, 23, 30);
+
+      @include m.mq(desktop) {
+        @include m.clamp-desktop(width, 215, 424);
+      }
+    }
+
+    &:last-child {
+      padding-left: 30px;
+    }
+  }
+}

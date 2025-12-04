@@ -1,21 +1,38 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
-.p-sidemenu {
+.c-sidemenu {
+  //サイドメニューを右に隠す
+  position: fixed;
+  top: 0;
+  right: -100%;
   width: 100%;
   height: 100%;
+  z-index: 1000;
+  transition: right 300ms ease-out;
+  
   padding: 178px 20px 84px 46px;
-
+  overflow-y: auto;
   color: vars.$color-gray-700;
   background-color: vars.$color-beige-100;
 
+  @include m.mq(mobile) {
+    @include m.clamp-mobile(width, 328, 367);
+  }
+
   @include m.mq(desktop) {
+    //設定リセット
+    position: static;
+    top: auto;
+    transition: none;
+
     display: flex;
     flex-direction: column;
     gap: 90px;
     padding-top: 84px;
     @include m.clamp-desktop(padding-left, 20, 46);
   }
+
 
   &__title {
     font-family: vars.$fontAccent;
@@ -66,5 +83,24 @@
 
   &__subitem {
     @include m.font-size(20);
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: vars.$overlay-black-50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-out;
+    z-index: 500;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &.is-open {
+    right: 0;
   }
 }

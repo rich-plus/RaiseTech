@@ -1,0 +1,36 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use '../component' as *;
+
+.p-archive {
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include m.clamp-mobile(gap, 32, 37);
+    @include m.clamp-mobile-multi(padding, (32 19 17 19), (39 35 75 43));
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(gap, 37, 70);
+      @include m.clamp-desktop-multi(padding, (39 35 75 43), (63 100 86 100));
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    @include m.clamp-mobile-reverse(gap, 25, 20);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 21px;
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(gap, 21, 30);
+    }
+  }
+}

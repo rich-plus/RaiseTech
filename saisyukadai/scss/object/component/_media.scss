@@ -1,0 +1,44 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-media {
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid vars.$color-gray-700;
+
+  }
+
+  &__article-right {
+    display: grid;
+    grid-template-columns: 42.8% 1fr;
+    @include m.clamp-mobile(gap, 10, 21);
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(gap, 21, 40);
+    }
+  }
+
+  &__article-left {
+    display: grid;
+    grid-template-columns: 1fr 42.8%;
+    @include m.clamp-mobile(gap, 10, 21);
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(gap, 21, 40);
+    }
+
+  }
+
+  &__center  {
+    .c-media__img {
+      width: auto;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;      
+    }
+  }
+
+}

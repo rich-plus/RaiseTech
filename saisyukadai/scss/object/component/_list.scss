@@ -1,0 +1,22 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-list {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+  @include m.clamp-mobile(padding-let, 0, 50);
+
+  &__ordered {
+    margin-left: 19px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+  &__nested {
+    margin-top: 17px;
+    margin-left: 18px;
+  }
+}

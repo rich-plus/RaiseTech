@@ -1,0 +1,98 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+@use '../component' as *;
+
+.p-single {
+  .c-main-visual {
+    @include m.clamp-mobile(height, 225, 505);
+
+    @include m.mq(desktop) {
+      height: 500px;
+    }
+
+    &__title {
+      left: 0;
+
+      @include m.mq(mobile) {
+        @include m.clamp-mobile(left, 25, 86);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @include m.clamp-mobile(gap, 30, 60);
+    @include m.clamp-mobile-multi(padding, (34 20 69 20), (60 60 149 60));
+
+    @include m.mq(desktop) {
+      @include m.clamp-desktop-multi(padding, (60 60 149 60), (63 100 274 100));
+    }
+  }
+
+  //以下要素の余白調整
+  &__heading {
+      margin-bottom: -4px;
+
+      &--h4 {
+        @include m.clamp-mobile(margin-bottom, 4, 13);
+        @include m.mq(desktop) {
+          margin-bottom: -4px;
+        }
+      }
+  }
+
+  &__text {
+      margin-bottom: 6px;
+      @include m.mq() {
+        margin-bottom: 0;
+      }
+  }
+
+  &__article-right {
+    @include m.mq() {
+      margin-bottom: 57px;
+    }
+    @include m.mq(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__center {
+    @include m.mq() {
+      margin-bottom: 181px;
+    }
+    @include m.mq(desktop) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__grid {
+    margin-bottom: 3px;
+    @include m.mq() {
+      margin-bottom: 0px;
+    }
+    @include m.mq(desktop) {
+      margin-bottom: -16px;
+    }
+  }
+
+  &__list {
+    margin-bottom: -4px;
+    @include m.clamp-mobile(padding-left, 0, 50);
+  }
+
+  &__code {
+    @include m.mq(desktop) {
+      margin-bottom: -10px;
+    }
+  }
+  
+  &__table {
+    margin-bottom: 30px;
+    @include m.mq() {
+      margin-bottom: 0px;
+    }
+  }
+
+}

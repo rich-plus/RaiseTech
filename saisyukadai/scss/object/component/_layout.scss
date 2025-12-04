@@ -24,6 +24,7 @@
       flex-direction: row;
       @include m.clamp-desktop(gap, 41, 81);
     }
+
     @include m.mq(desktop) {
       @include m.clamp-desktop(padding-top, 40, 120);
       @include m.clamp-desktop(padding-right, 40, 120);
@@ -33,12 +34,23 @@
   }
 
   &__aside {
-    display: none;
-
+    
     @include m.mq(desktop) {
-      display: block;
       flex: 1.92;
       min-width: 230px;
     }
   }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include m.mq() {
+      flex-direction: row;
+      align-items: center;
+      gap: 19px;
+    }
+  }
+
 }

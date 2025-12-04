@@ -21,189 +21,189 @@
 
 <body>
   <div class="l-wrapper">
-    <div class="l-wrapper__inner">
+    <div class="c-layout__wrapper">
       <header class="l-header">
-        <div class="p-header">
-          <a class="p-header__logo" href="/">
-            <img src="./images/logo/logo.png" alt="ハンバーガーショップのホームへ">
+        <div class="c-header">
+          <a class="c-header__logo" href="/index.html">
+            <img src="./images/logo/logo.png" alt="ハンバーガーショップ">
           </a>
 
-          <form class="p-search-form" action="#" method="get">
-            <label for="search" class="p-search-form__label">
+          <form class="c-search" action="/archive-search.html" method="get" role="search">
+            <label for="search" class="u-visually-hidden">
+              サイト内検索
             </label>
-            <input type="search" id="search" name="s" class="p-search-form__input">
-            <button type="submit" class="c-button p-search-form__button">検索</button>
+            <input type="search" id="search" name="s" class="c-search__input" aria-label="検索キーワードを入力">
+            <button type="submit" class="c-button--search">検索</button>
           </form>
         </div>
+        <!-- Menuボタン（Tablet/Mobile） -->
+        <button type="button" class="c-hamburger js-hamburger">
+          <span class="c-hamburger__menu">Menu</span>
+        </button>
       </header>
 
-      <main class="l-archive">
-        <section class="p-main-visual">
-          <div class="p-main-visual__inner">
-            <h1 class="p-main-visual__title">h1 チーズバーガー</h1>
-            <picture>
-              <source srcset="./images/single/single--pc.jpg" media="( min-width: 1024px )">
-              <source srcset="./images/single/single--tb.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/single--sp.jpg" alt="人気メニューのチーズバーガー">
-            </picture>
-          </div>
+      <main class="l-main p-single">
+        <section class="c-main-visual">
+          <picture>
+            <source srcset="./images/single/single--pc.jpg" media="( min-width: 1024px )">
+            <source srcset="./images/single/single--tb.jpg" media="( min-width: 768px )">
+            <img class="c-main-visual__img" src="./images/single/single--sp.jpg" alt="チーズバーガー">
+          </picture>
+          <h1 class="c-main-visual__title c-font--heading-l c-color--text-inverse">h1 チーズバーガー</h1>
         </section>
 
-        <article class="p-archive">
-          <h2>見出しh2</h2>
-          <p>
+        <article class="p-single__body">
+          <h2 class="p-single__heading c-font--subheading-l">見出しh2</h2>
+          <p class="p-single__text">
             Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
           </p>
-          <h3>見出しh3</h3>
-          <h4>見出しh4</h4>
-          <h5>見出しh5</h5>
-          <h6>見出しh6</h6>
+          <h3 class="p-single__heading c-font--subheading-m">見出しh3</h3>
+          <h4 class="p-single__heading p-single__heading--h4 c-font--subheading-xs">見出しh4</h4>
+          <h5 class="p-single__heading c-font--subheading-xs">見出しh5</h5>
+          <h6 class="p-single__heading c-font--subheading-xs">見出しh6</h6>
 
-          <h3>Blockquote</h3>
-          <blockquote cite="#">
-            <p>
+
+          <figure class="c-blockquote c-color-bg">
+            <blockquote cite="#">
+              <p>
+              </p>
+              Blockquote
               引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
-            </p>
-          </blockquote>
-          <p>
-            出典元：<a href="#">○○○○○○○○○○○○</a>
-          </p>
-
+            </blockquote>
+            <figcaption>
+              出典元： <a href="#" class="c-blockquote__link">○○○○○○○○○○○○</a>
+            </figcaption>
+          </figure>
+          <div class="c-media__wide">
             <picture>
               <source srcset="./images/single/burgset--pc-wide.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-wide.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-wide.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-media__img" src="./images/single/burgset--sp-wide.jpg" alt="チーズバーガーとポテトセット">
             </picture>
-
-          <article>
-            <div>
+          </div>
+          <article class="c-media__article-right p-single__article-right">
             <picture>
               <source srcset="./images/single/burgset--pc-article.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-article.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-article.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-media__img" src="./images/single/burgset--sp-article.jpg" alt="チーズバーガーとポテトセット">
             </picture>
-            </div>
-            <div>
-              <p>
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-              </p>
-            </div>
+            <p>
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+            </p>
           </article>
-          <article>
-            <div>
+          <article class="c-media__article-left">
+            <p>
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+              テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
+            </p>
             <picture>
               <source srcset="./images/single/burgset--pc-article.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-article.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-article.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-media__img" src="./images/single/burgset--sp-article.jpg" alt="チーズバーガーとポテトセット">
             </picture>
-            </div>
-            <div>
-              <p>
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-                テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
-              </p>
-            </div>
           </article>
-
-          <div>
+          <div class="c-media__center p-single__center">
             <picture>
               <source srcset="./images/single/burgset--pc-center.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-center.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-center.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-media__img" src="./images/single/burgset--sp-center.jpg" alt="チーズバーガーとポテトセット">
             </picture>
           </div>
 
-          <div>
+          <div class="c-grid p-single__grid">
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
             <picture>
               <source srcset="./images/single/burgset--pc-grid.jpg" media="( min-width: 1024px )">
               <source srcset="./images/single/burgset--tb-grid.jpg" media="( min-width: 768px )">
-              <img class="p-main-visual__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
+              <img class="c-grid__img" src="./images/single/burgset--sp-grid.jpg" alt="チーズバーガーとポテトセット">
             </picture>
           </div>
 
-          <ol>
-            <li>リストリストリスト</li>
-            <li>リストリストリスト</li>
-            <li>
-              <ol>
-                <li>リスト2リスト2リスト2</li>
-                <li>リスト2リスト2リスト2</li>
+          <div class="c-list p-single__list">
+            <div class="c-list__ordered">
+              <ol class="c-list__item">
+                <li>リストリストリスト</li>
+                <li>リストリストリスト
+                  <ol class="c-list__nested">
+                    <li>リスト2リスト2リスト2</li>
+                    <li>リスト2リスト2リスト2</li>
+                  </ol>
+                </li>
               </ol>
-            </li>
-            <li>リストリストリスト</li>
-            <li>リストリストリスト</li>
-          </ol>
-
-          <ul>
-            <li>リストリストリスト</li>
-            <li>リストリストリスト</li>
-            <li>
-              <ul>
-                <li>リスト2リスト2リスト2</li>
-                <li>リスト2リスト2リスト2</li>
+              <ol class="c-list__item">
+                <li>リストリストリスト</li>
+                <li>リストリストリスト</li>
+              </ol>
+            </div>
+            <div class="c-list__unordered">
+              <ul class="c-list__item">
+                <li>リストリストリスト</li>
+                <li>リストリストリスト
+                  <ul class="c-list__nested">
+                    <li>リスト2リスト2リスト2</li>
+                    <li>リスト2リスト2リスト2</li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-            <li>リストリストリスト</li>
-            <li>リストリストリスト</li>
-          </ul>
+              <ul class="c-list__item">
+                <li>リストリストリスト</li>
+                <li>リストリストリスト</li>
+              </ul>
+            </div>
+          </div>
 
-          <pre>
-          <code>
-            &lt;html&gt;
-               &lt;head&gt;
-               &lt;/head&gt;
-               &lt;body&gt;
-               &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
-          </pre>
+<pre class="c-code p-single__code"><code>&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-          <table>
+          <table class="c-table p-single__table">
             <tbody>
               <tr>
                 <td>テーブル</td>
@@ -228,96 +228,100 @@
             </tbody>
           </table>
 
-          <button type="button" class="c-button">ボタン</button>
+          <button type="button" class="c-button--normal">ボタン</button>
 
-          <p>boldboldboldboldboldboldbold</p>
+          <p class="c-font--bold">boldboldboldboldboldboldbold</p>
         </article>
       </main>
     </div>
-    <aside class="l-aside">
-      <nav class="p-sidemenu" aria-label="サイドメニュー">
-        <h2 class="p-sidemenu__title">Menu</h2>
-        <ul class="p-sidemenu__list">
-          <li class="p-sidemenu__item">
-            <h3 class="p-sidemenu__category">バーガー</h3>
-            <ul class="p-submenu">
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">ハンバーガー</a>
+    <aside class="l-aside c-layout__aside">      
+      <nav class="c-sidemenu" aria-label="サイドメニュー">
+        <!-- Menu (PC) -->
+        <h2 class="c-sidemenu__title">Menu</h2>
+
+        <!-- Menu List (共通) -->
+        <ul class="c-sidemenu__nav-list">
+          <li class="c-sidemenu__category">
+            <a href="/archive.html" class="c-sidemenu__item js-fade-link">バーガー</a>
+            <ul class="c-sidemenu__sub-list">
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">ハンバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">チーズバーガー</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">チーズバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">テリヤキバーガー</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">テリヤキバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">アボカドバーガー</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">アボカドバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">フィッシュバーガー</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">フィッシュバーガーフィッシュバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">ベーコンバーガー</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">ベーコンバーガー</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">チキンバーガー</a>
-              </li>
-            </ul>
-          </li>
-          <li class="p-sidemenu__item">
-            <h3 class="p-sidemenu__category">サイド</h3>
-            <ul class="p-submenu">
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">ポテト</a>
-              </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">サラダ</a>
-              </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">ナゲット</a>
-              </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">コーン</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">チキンバーガー</a>
               </li>
             </ul>
           </li>
-          <li class="p-sidemenu__item">
-            <h3 class="p-sidemenu__category">ドリンク</h3>
-            <ul class="p-submenu">
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">コーラ</a>
+          <li class="c-sidemenu__category">
+            <a href="/archive.html" class="c-sidemenu__item js-fade-link">サイド</a>
+            <ul class="c-sidemenu__sub-list">
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">ポテト</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">ファンタ</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">サラダ</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">オレンジ</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">ナゲット</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">アップル</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">コーン</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">紅茶（Ice/Hot）</a>
+            </ul>
+          </li>
+          <li class="c-sidemenu__category">
+            <a href="/archive.html" class="c-sidemenu__item js-fade-link">ドリンク</a>
+            <ul class="c-sidemenu__sub-list">
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">コーラ</a>
               </li>
-              <li class="p-submenu__item">
-                <a href="" class="p-submenu__link">コーヒー（Ice/Hot）</a>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">ファンタ</a>
+              </li>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">オレンジ</a>
+              </li>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">アップル</a>
+              </li>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">紅茶（Ice/Hot）</a>
+              </li>
+              <li class="c-sidemenu__subitem">
+                <a href="" class="c-sidemenu__link">コーヒー（Ice/Hot）</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
+      <div class="c-sidemenu__overlay"></div>
     </aside>
   </div>
 
   <footer class="l-footer">
-    <div class="p-footer">
-      <nav class="p-footer__nav" aria-label="フッターメニュー">
-        <ul class="p-footer__nav-list">
-          <li class="p-footer__item"><a href="" class="p-footer__link">ショップ情報</a></li>
-          <li class="p-footer__item"><a href="" class="p-footer__link">ヒストリー</a></li>
+    <div class="c-footer">
+      <nav class="c-footer__nav" aria-label="フッターメニュー">
+        <ul class="c-footer__nav-list">
+          <li class="c-footer__item"><a href="/page.html" class="c-footer__link js-fade-link">ショップ情報</a></li>
+          <li class="c-footer__item"><a href="" class="c-footer__link">ヒストリー</a></li>
         </ul>
       </nav>
-      <small class="p-footer__copy">Copyright: RaiseTech</small>
+      <small class="c-footer__copy">Copyright: RaiseTech</small>
     </div>
   </footer>
   <script src="./js/jquery-3.7.1.min.js"></script>

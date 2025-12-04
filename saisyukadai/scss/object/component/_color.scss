@@ -7,17 +7,22 @@
 // ----------------------------------------
 
 .c-color {
+  // Text Colors
   &--text-primary { color: vars.$color-brown-900; }
   &--text-secondary { color: vars.$color-gray-700; }
   &--text-tertiary { color: vars.$color-gray-200; } 
   &--text-link { color: vars.$color-blue-700; }
   &--text-inverse { color: vars.$color-white; } //白文字＝暗い背景　//inverse＝反転
 
+  // Background Colors
   &--bg-primary { background-color: vars.$color-cream-50; }
   &--bg-secondary { background-color: vars.$color-beige-100; }
   &--bg-accent { background-color: vars.$color-brown-800; }
   &--bg-surface { background-color: vars.$color-white; } //白背景 //surface＝表面
-  &--bg-scrim-white {background-color: rgba(vars.$color-white, 0.8);} //白透過背景 //scrim＝薄暗い覆い
-  &--bg-scrim-black {background-color: rgba(vars.$color-black, 0.4029);} //黒透過背景
-  &--bg-scrim-black-light {background-color: rgba(vars.$color-black, 0.3116);} //黒透過背景
+
+  // Overlay Colors
+  &--bg-overlay-white-80 {background-color: vars.$overlay-white-80;}
+  &--bg-overlay-black-50 {background-color: vars.$overlay-black-50;} 
+  &--bg-overlay-black-40 {background-color: vars.$overlay-black-40;} 
+  &--bg-overlay-black-30 {background-color: vars.$overlay-black-30;} 
 }

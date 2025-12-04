@@ -1,0 +1,91 @@
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-pagination {
+  margin: 30px 20px;
+
+  color: vars.$color-gray-700;
+
+  @include m.mq() {
+    margin: 32px 0px;
+  }
+  @include m.mq(desktop) {
+    @include m.clamp-desktop(margin-top, 32, 64);
+    @include m.clamp-desktop(margin-bottom, 32, 64);
+  }
+
+  &__prev, &__next {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+// -------------------------------------------------
+//  PC/Tablet : 数字あり
+// -------------------------------------------------
+  &__numbers {
+    display: none;
+
+    @include m.mq() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 17px;
+      font-weight: vars.$bold;
+      line-height: vars.$lh-l;
+    }
+
+  }
+
+  &__info {
+    @include m.mq() {
+      margin-right: 2px;
+    }
+  }
+
+  &__list {
+    @include m.mq() {
+      display: flex;
+      gap: 15px;
+
+      & li:first-child {
+        .c-pagination__item {
+          @include m.mq() {
+            color: vars.$color-white;
+            background-color: vars.$color-brown-800;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include m.mq() {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+
+      border: 1px solid vars.$color-gray-700;
+    }
+  }
+
+// -------------------------------------------------
+//  Mobile : 前へ / 次へ
+// -------------------------------------------------
+  &__arrows {
+    display: flex;
+    justify-content: space-between;
+    @include m.mq() {
+      display: none;
+    }
+  }
+  &__prev-laquo {
+    margin-right: 8px;
+  }
+  &__next-raquo {
+    margin-left: 8px;
+  }
+
+}

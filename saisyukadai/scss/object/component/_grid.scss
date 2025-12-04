@@ -1,2 +1,29 @@
-@use '../foundation/mixin' as m;
-@use '../foundation/variables' as vars;
+@use '../../foundation/mixin' as m;
+@use '../../foundation/variables' as vars;
+
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  
+  @include m.mq(mobile) {    
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  }
+
+  @include m.mq() {
+    grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
+    column-gap: 16px;
+  }
+  
+  @include m.mq(desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(438px, 1fr));
+    gap: 20px;
+  }
+  
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid vars.$color-gray-700;
+  }
+}

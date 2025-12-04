@@ -13,6 +13,14 @@ $regular: 400;
 $bold: 700;
 
 // ========================================
+//  Line Height
+// ========================================
+$lh-s: 1.06;
+$lh-m: 1.6;
+$lh-l: 2.06;
+$lh-xl: 2.35;
+
+// ========================================
 //  Color
 // ========================================
 
@@ -32,6 +40,7 @@ $color-beige-100 : #F2EDE9; //サブメニュー背景
 $color-gray-700 : #707070; // サブテキスト
 $color-gray-300 : #DED8D3; //ボタン背景
 $color-gray-200 : #EAEAEA; // Takeoutタイトル
+$color-gray-100 : #F5F5F5; // 引用
 $color-blue-700 : #4A6C9B; // 出典リンク
 
 
@@ -41,25 +50,10 @@ $color-blue-700 : #4A6C9B; // 出典リンク
 $color-white : #FFFFFF; //白文字
 $color-black : #000000; //黒背景
 
-//以下修正後削除
 // ----------------------------------------
-//  Text Colors
+//  透過色
 // ----------------------------------------
-// $color-text-base : #3C2A10; // メインテキスト
-// $color-text-white : #FFFFFF; //白文字
-// $color-text-muted : #707070; // サブテキスト
-// $color-link : #4A6C9B; // 出典リンク
-
-// ----------------------------------------
-//  Background Colors
-// ----------------------------------------
-// $color-bg-black : #000000; //黒背景
-// $color-bg-button : #F2EDE9; //ボタン背景
-// $color-bg-button2 : #DED8D3; //ボタン背景
-
-// // ----------------------------------------
-// //  Border Colors
-// // ----------------------------------------
-// $color-border-light : #707070;
-// $color-border-white : #FFFFFF;
-
+$overlay-white-80 : rgba($color-white, 0.8); //白透過背景 //scrim＝薄暗い覆い
+$overlay-black-50 : rgba($color-black, 0.5); //黒透過背景50%
+$overlay-black-40 : rgba($color-black, 0.4029); //黒透過背景40%
+$overlay-black-30 : rgba($color-black, 0.3116); //黒透過背景30%

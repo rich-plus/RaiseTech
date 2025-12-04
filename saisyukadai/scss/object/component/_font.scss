@@ -3,6 +3,9 @@
 
 .c-font {
 
+  &--bold { font-weight: vars.$bold; }
+  &--regular { font-weight: vars.$regular; }
+
   // ----------------------------------------
   //  Heading（見出し）
   // ----------------------------------------
@@ -37,7 +40,7 @@
   // ----------------------------------------
 
   &--subheading {
-
+    font-weight: vars.$bold;
     //SubHeading size XL (30→36px) //TOPページ小見出し（Access）
     &-xl {
       @include m.font-size(30);
@@ -66,12 +69,11 @@
 
     //Text size M (14→16px) //TOPページ本文（Access） 
     &-m {
-      font-weight: vars.$bold;
       @include m.font-size(14);
-      line-height: 2.35;
+      line-height: vars.$lh-xl;
       @include m.mq(desktop) {
          @include m.font-size(16);
-          line-height: 2.06;
+          line-height: vars.$lh-l;
         }
     }
 
