@@ -12,18 +12,16 @@
 
   @include m.mq() {
     grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
-    column-gap: 16px;
   }
   
   @include m.mq(desktop) {
     grid-template-columns: repeat(auto-fit, minmax(438px, 1fr));
-    gap: 20px;
   }
   
   &__img {
     width: 100%;
     height: auto;
     display: block;
-    border: 1px solid vars.$color-gray-700;
+    border: vars.$border-gray-700-1;
   }
 }

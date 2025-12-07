@@ -4,11 +4,7 @@
 
 .p-single {
   .c-main-visual {
-    @include m.clamp-mobile(height, 225, 505);
-
-    @include m.mq(desktop) {
-      height: 500px;
-    }
+    @include m.clamp-mobile(height, 225, 500);
 
     &__title {
       left: 0;
@@ -30,68 +26,12 @@
     }
   }
 
-  //以下要素の余白調整
-  &__heading {
-      margin-bottom: -4px;
+  &__button {
+    border-radius: 20px;
+    aspect-ratio: 70 / 17;
 
-      &--h4 {
-        @include m.clamp-mobile(margin-bottom, 4, 13);
-        @include m.mq(desktop) {
-          margin-bottom: -4px;
-        }
-      }
-  }
-
-  &__text {
-      margin-bottom: 6px;
-      @include m.mq() {
-        margin-bottom: 0;
-      }
-  }
-
-  &__article-right {
-    @include m.mq() {
-      margin-bottom: 57px;
-    }
-    @include m.mq(desktop) {
-      margin-bottom: 0;
-    }
-  }
-
-  &__center {
-    @include m.mq() {
-      margin-bottom: 181px;
-    }
-    @include m.mq(desktop) {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__grid {
-    margin-bottom: 3px;
-    @include m.mq() {
-      margin-bottom: 0px;
-    }
-    @include m.mq(desktop) {
-      margin-bottom: -16px;
-    }
-  }
-
-  &__list {
-    margin-bottom: -4px;
-    @include m.clamp-mobile(padding-left, 0, 50);
-  }
-
-  &__code {
-    @include m.mq(desktop) {
-      margin-bottom: -10px;
-    }
-  }
-  
-  &__table {
-    margin-bottom: 30px;
-    @include m.mq() {
-      margin-bottom: 0px;
+    @include m.mq(mobile) {
+      @include m.clamp-mobile(width, 335, 429);
     }
   }
 

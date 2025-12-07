@@ -3,8 +3,8 @@
 // ========================================
 //  Font Family
 // ========================================
-$fontBase: 'M PLUS 1p','Roboto', sans-serif;
-$fontAccent: 'Roboto', sans-serif;
+$font-base: 'M PLUS 1p','Roboto', sans-serif;
+$font-accent: 'Roboto', sans-serif;
 
 // ========================================
 //  Font Weight
@@ -20,6 +20,7 @@ $lh-m: 1.6;
 $lh-l: 2.06;
 $lh-xl: 2.35;
 
+
 // ========================================
 //  Color
 // ========================================
@@ -27,33 +28,44 @@ $lh-xl: 2.35;
 // ----------------------------------------
 //  Brown / Orange 系統（メインカラー）
 // ----------------------------------------
-$color-brown-900 : #3C2A10; // メインテキスト
-$color-brown-800 : #3C2B1C; // ページネーション
-$color-cream-50 : #FFFDFA; //サイト全体の背景
-$color-cream-100 : #FFF7EF; //ヘッダー背景
-$color-beige-100 : #F2EDE9; //サブメニュー背景
+$color-brown-900 : #3C2A10; 
+$color-brown-800 : #3C2B1C; 
+$color-cream-50 : #FFFDFA; 
+$color-cream-100 : #FFF7EF;
+$color-beige-100 : #F2EDE9;
 
 
 // ----------------------------------------
 //  Gray / Blue 系統
 // ----------------------------------------
-$color-gray-700 : #707070; // サブテキスト
-$color-gray-300 : #DED8D3; //ボタン背景
-$color-gray-200 : #EAEAEA; // Takeoutタイトル
-$color-gray-100 : #F5F5F5; // 引用
-$color-blue-700 : #4A6C9B; // 出典リンク
+$color-gray-700 : #707070; 
+$color-gray-300 : #DED8D3; 
+$color-gray-200 : #EAEAEA; 
+$color-gray-100 : #F5F5F5; 
+$color-blue-700 : #4A6C9B; 
 
 
 // ----------------------------------------
-//  白・黒
+//  White / Black
 // ----------------------------------------
-$color-white : #FFFFFF; //白文字
-$color-black : #000000; //黒背景
+$color-white : #FFFFFF; 
+$color-black : #000000;
 
 // ----------------------------------------
-//  透過色
+//  Overlays (透過色)
 // ----------------------------------------
-$overlay-white-80 : rgba($color-white, 0.8); //白透過背景 //scrim＝薄暗い覆い
-$overlay-black-50 : rgba($color-black, 0.5); //黒透過背景50%
-$overlay-black-40 : rgba($color-black, 0.4029); //黒透過背景40%
-$overlay-black-30 : rgba($color-black, 0.3116); //黒透過背景30%
+$overlay-white-80 : rgba($color-white, 0.8); 
+$overlay-black-50 : rgba($color-black, 0.5); 
+$overlay-black-40 : rgba($color-black, 0.4029); 
+$overlay-black-30 : rgba($color-black, 0.3116); 
+
+// ========================================
+//  Gradients
+// ========================================
+$grad-beige-gray: linear-gradient(90deg, $color-beige-100 0%, $color-gray-300 100%);
+
+
+// ========================================
+//  Border
+// ========================================
+$border-gray-700-1: 1px solid $color-gray-700;

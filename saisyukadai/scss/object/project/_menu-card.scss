@@ -19,6 +19,11 @@
   }
 
   &__title {
+    font-weight: vars.$bold;
+    @include m.clamp-mobile(font-size, 41, 44);
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(font-size, 44, 80);
+    }
 
     &.c-underline::after {
       height: 4px;
@@ -42,9 +47,22 @@
     padding: 16px;
   }
 
-  &__text {
-    @include m.clamp-mobile(margin-top, 8, 16);
+  &__subtitle {
+    font-weight: vars.$bold;
+    @include m.clamp-mobile(font-size, 22, 24);
+  }
 
+  &__text {
+    //16→14→16px
+    @include m.font-size(16);
+    @include m.mq() {
+      @include m.font-size(14);
+    }
+    @include m.mq(desktop) {
+      @include m.font-size(16);
+    }
+
+    @include m.clamp-mobile(margin-top, 8, 16);
     @include m.mq(desktop) {
       @include m.clamp-desktop-reverse(margin-top, 16, 10);
     }

@@ -41,12 +41,13 @@
     z-index: 2;
 
     // ----------------------------------------
-    // Tablet (右下配置）
+    // Tablet (100%配置）
     // ----------------------------------------
     @include m.mq() {
-      top: 30px;
+      top: 0;
+      right: 0;
       bottom: 0;
-      left: 21px;
+      left: 0;
     }
 
     // ----------------------------------------
@@ -81,6 +82,12 @@
   }
 
   &__title {
+font-weight: vars.$bold;
+      @include m.font-size(30);
+
+      @include m.mq(desktop) {
+        @include m.clamp-desktop(font-size, 30, 36);
+      }
 
     &.c-underline::after {
       height: 2px;
@@ -91,6 +98,16 @@
         @include m.clamp-desktop(margin-top, 15, 50.5);
       }
     }
+  }
+
+  &__text {
+      line-height: vars.$lh-xl;
+      @include m.font-size(14);
+
+      @include m.mq(desktop) {
+        line-height: vars.$lh-l;
+        @include m.font-size(16);
+      }
   }
 
 }

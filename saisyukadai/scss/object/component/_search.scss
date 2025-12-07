@@ -19,7 +19,7 @@
     height: 46px;
     color: vars.$color-gray-700;
     font-weight: vars.$bold;
-    border: 1px solid vars.$color-gray-700;
+    border: vars.$border-gray-700-1;
     border-radius: 10px;
 
     //padding
@@ -37,19 +37,13 @@
     background-size: 24px 24px;
   }
 
-  // &__button {
-  //   flex-shrink: 0;
-  //   @include m.clamp-mobile(width, 90, 136);
-  //   height: 46px;
+  &__button {
+    border-radius: 10px;
+    @include m.clamp-mobile(width, 90, 136);
+    height: 46px;
 
-  //   color: vars.$color-gray-700;
-  //   font-weight: vars.$bold;
-  //   border: 1px solid vars.$color-gray-700;
-  //   border-radius: 10px;
-  //   background: linear-gradient(90deg, vars.$color-beige-100 0%, vars.$color-gray-300 100%);
-
-  //   @include m.mq(desktop) {
-  //     @include m.clamp-desktop(width, 90, 136);
-  //   }
-  // }
+    @include m.mq(desktop) {
+      @include m.clamp-desktop(width, 90, 136);
+    }
+  }
 }

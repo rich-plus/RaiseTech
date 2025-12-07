@@ -6,7 +6,7 @@ $btnWidth: 45.25px;
 $btnHeight: 6px;
 
 .c-hamburger {
-  font-family: vars.$fontAccent;
+  font-family: vars.$font-accent;
   @include m.clamp-mobile(font-size, 20, 34);
   font-weight: vars.$bold;
   color: vars.$color-gray-700;

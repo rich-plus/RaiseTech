@@ -14,15 +14,15 @@ jQuery(function ($) {
   // ハンバーガーメニューの開閉
   $(".js-hamburger").on("click", function () {
     $(this).toggleClass("is-open");
-    $(".c-sidemenu").toggleClass("is-open");
-    $(".c-sidemenu__overlay").toggleClass("is-open");
+    $(".p-sidemenu").toggleClass("is-open");
+    $(".p-sidemenu__overlay").toggleClass("is-open");
     $("body").toggleClass("is-open");
   });
 
 // オーバーレイをクリックしたときにメニューを閉じる
-  $(".c-sidemenu__overlay").on("click", function() {
+  $(".p-sidemenu__overlay").on("click", function() {
     $(".js-hamburger").removeClass("is-open");
-    $(".c-sidemenu").removeClass("is-open");
+    $(".p-sidemenu").removeClass("is-open");
     $(this).removeClass("is-open");
     $("body").removeClass("is-open");
   });

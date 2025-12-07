@@ -4,16 +4,13 @@
 @forward "layout";
 
 // Layout（ページ構成）
-@forward "header";
 @forward "main-visual";
 @forward "hero";
-@forward "sidemenu";
-@forward "footer";
 
 // UI Components（パーツ）
-@forward "search";
 @forward "underline";
 @forward "button";
+@forward "search";
 @forward "card";
 @forward "pagination";
 
@@ -26,5 +23,4 @@
 @forward "table";
 
 // Animation
-@forward "fade";
 @forward "hamburger";

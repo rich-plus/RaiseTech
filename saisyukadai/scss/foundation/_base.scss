@@ -1,15 +1,18 @@
 @use '../foundation/mixin' as m;
 @use '../foundation/variables' as vars;
 
+// ========================================
+//  Base Styles
+// ========================================
 
 body {
-  font-family: vars.$fontBase;
+  font-family: vars.$font-base;
   @include m.font-size(16);
   font-weight: vars.$regular;
   color: vars.$color-brown-900;
   background-color: vars.$color-cream-50;
   box-sizing: border-box;
-  line-height: 1.6;
+  line-height: vars.$lh-m;
 }
 
 ul {

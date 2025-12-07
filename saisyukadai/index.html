@@ -20,11 +20,11 @@
 </head>
 
 <body>
-  <div class="l-wrapper">
-    <div class="c-layout__wrapper">
+  <div class="c-layout__wrapper">
+    <div class="c-layout__wrapper-inner">
       <header class="l-header">
-        <div class="c-header">
-          <a class="c-header__logo" href="/index.html">
+        <div class="p-header">
+          <a class="p-header__logo" href="/index.html">
             <img src="./images/logo/logo.png" alt="ハンバーガーショップ">
           </a>
 
@@ -33,7 +33,7 @@
               サイト内検索
             </label>
             <input type="search" id="search" name="s" class="c-search__input" aria-label="検索キーワードを入力">
-            <button type="submit" class="c-button--search">検索</button>
+            <button type="submit" class="c-search__button c-button--grad c-color--text-secondary">検索</button>
           </form>
         </div>
         <!-- Menuボタン（Tablet/Mobile） -->
@@ -49,37 +49,37 @@
             <source srcset="./images/top/mv--tb.jpg" media="( min-width: 768px )">
             <img class="c-main-visual__img" src="./images/top/mv--sp.jpg" alt="ハンバーガーショップのメインビジュアル画像">
           </picture>
-          <h1 class="c-main-visual__title c-font--heading-m c-color--text-inverse">ダミーサイト</h1>
+          <h1 class="c-main-visual__title c-color--text-inverse">ダミーサイト</h1>
         </section>
 
         <div class="c-layout__container">
           <a href="/archive.html" class="p-menu-card p-menu-card--takeout js-fade-link">
-            <h2 class="p-menu-card__title c-font--heading-xl c-color--text-tertiary c-underline">Take Out</h2>
+            <h2 class="p-menu-card__title c-font--accent c-color--text-tertiary c-underline">Take Out</h2>
             <div class="p-menu-card__content">
               <div class="p-menu-card__item c-color--bg-overlay-white-80">
-                <h3 class="p-menu-card__subtitle c-font--subheading-s">Take OUT1</h3>
-                <p class="p-menu-card__text c-font--body-s">
+                <h3 class="p-menu-card__subtitle">Take OUT1</h3>
+                <p class="p-menu-card__text">
                   当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています </p>
               </div>
               <div class="p-menu-card__item c-color--bg-overlay-white-80">
-                <h3 class="p-menu-card__subtitle c-font--subheading-s">Take OUT2</h3>
-                <p class="p-menu-card__text c-font--body-s">
+                <h3 class="p-menu-card__subtitle">Take OUT2</h3>
+                <p class="p-menu-card__text">
                   当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています </p>
               </div>
             </div>
           </a>
 
           <a href="/archive.html" class="p-menu-card p-menu-card--eatin js-fade-link">
-            <h2 class="p-menu-card__title c-font--heading-xl c-color--text-inverse c-underline">Eat In</h2>
+            <h2 class="p-menu-card__title c-font--accent c-color--text-inverse c-underline">Eat In</h2>
             <div class="p-menu-card__content">
               <div class="p-menu-card__item c-color--bg-overlay-white-80">
-                <h3 class="p-menu-card__subtitle c-font--subheading-s">Eat In1</h3>
-                <p class="p-menu-card__text c-font--body-s">
+                <h3 class="p-menu-card__subtitle">Eat In1</h3>
+                <p class="p-menu-card__text">
                   店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
               </div>
               <div class="p-menu-card__item c-color--bg-overlay-white-80">
-                <h3 class="p-menu-card__subtitle c-font--subheading-s">Eat In2</h3>
-                <p class="p-menu-card__text c-font--body-s">
+                <h3 class="p-menu-card__subtitle">Eat In2</h3>
+                <p class="p-menu-card__text">
                   店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
               </div>
             </div>
@@ -97,8 +97,8 @@
           <div class="p-access__overlay2 c-color--bg-overlay-black-30"></div>
 
           <div class="p-access__inner">
-            <h2 class="p-access__title c-font--subheading-xl c-color--text-inverse c-underline">見出しが入ります</h2>
-            <p class="p-access__text c-font--bold c-font--body-m c-color--text-inverse">
+            <h2 class="p-access__title c-color--text-inverse c-underline">見出しが入ります</h2>
+            <p class="p-access__text c-font--bold c-color--text-inverse">
               テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
             </p>
           </div>
@@ -106,94 +106,94 @@
       </main>
     </div>
 
-    <aside class="l-aside c-layout__aside">      
-      <nav class="c-sidemenu" aria-label="サイドメニュー">
+    <aside class="l-aside c-layout__aside">
+      <nav class="p-sidemenu" aria-label="サイドメニュー">
         <!-- Menu (PC) -->
-        <h2 class="c-sidemenu__title">Menu</h2>
+        <h2 class="p-sidemenu__title">Menu</h2>
 
         <!-- Menu List (共通) -->
-        <ul class="c-sidemenu__nav-list">
-          <li class="c-sidemenu__category">
-            <a href="/archive.html" class="c-sidemenu__item js-fade-link">バーガー</a>
-            <ul class="c-sidemenu__sub-list">
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">ハンバーガー</a>
+        <ul class="p-sidemenu__nav-list">
+          <li class="p-sidemenu__category">
+            <a href="/archive.html" class="p-sidemenu__item js-fade-link">バーガー</a>
+            <ul class="p-sidemenu__sub-list">
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">ハンバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">チーズバーガー</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">チーズバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">テリヤキバーガー</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">テリヤキバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">アボカドバーガー</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">アボカドバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">フィッシュバーガーフィッシュバーガー</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">フィッシュバーガーフィッシュバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">ベーコンバーガー</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">ベーコンバーガー</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">チキンバーガー</a>
-              </li>
-            </ul>
-          </li>
-          <li class="c-sidemenu__category">
-            <a href="/archive.html" class="c-sidemenu__item js-fade-link">サイド</a>
-            <ul class="c-sidemenu__sub-list">
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">ポテト</a>
-              </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">サラダ</a>
-              </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">ナゲット</a>
-              </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">コーン</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">チキンバーガー</a>
               </li>
             </ul>
           </li>
-          <li class="c-sidemenu__category">
-            <a href="/archive.html" class="c-sidemenu__item js-fade-link">ドリンク</a>
-            <ul class="c-sidemenu__sub-list">
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">コーラ</a>
+          <li class="p-sidemenu__category">
+            <a href="/archive.html" class="p-sidemenu__item js-fade-link">サイド</a>
+            <ul class="p-sidemenu__sub-list">
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">ポテト</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">ファンタ</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">サラダ</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">オレンジ</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">ナゲット</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">アップル</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">コーン</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">紅茶（Ice/Hot）</a>
+            </ul>
+          </li>
+          <li class="p-sidemenu__category">
+            <a href="/archive.html" class="p-sidemenu__item js-fade-link">ドリンク</a>
+            <ul class="p-sidemenu__sub-list">
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">コーラ</a>
               </li>
-              <li class="c-sidemenu__subitem">
-                <a href="" class="c-sidemenu__link">コーヒー（Ice/Hot）</a>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">ファンタ</a>
+              </li>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">オレンジ</a>
+              </li>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">アップル</a>
+              </li>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">紅茶（Ice/Hot）</a>
+              </li>
+              <li class="p-sidemenu__subitem">
+                <a href="" class="p-sidemenu__link">コーヒー（Ice/Hot）</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
-      <div class="c-sidemenu__overlay"></div>
+      <div class="p-sidemenu__overlay"></div>
     </aside>
   </div>
 
   <footer class="l-footer">
-    <div class="c-footer">
-      <nav class="c-footer__nav" aria-label="フッターメニュー">
-        <ul class="c-footer__nav-list">
-          <li class="c-footer__item"><a href="/page.html" class="c-footer__link js-fade-link">ショップ情報</a></li>
-          <li class="c-footer__item"><a href="" class="c-footer__link">ヒストリー</a></li>
+    <div class="p-footer">
+      <nav class="p-footer__nav" aria-label="フッターメニュー">
+        <ul class="p-footer__nav-list">
+          <li class="p-footer__item"><a href="/page.html" class="p-footer__link js-fade-link">ショップ情報</a></li>
+          <li class="p-footer__item"><a href="" class="p-footer__link">ヒストリー</a></li>
         </ul>
       </nav>
-      <small class="c-footer__copy">Copyright: RaiseTech</small>
+      <small class="p-footer__copy">Copyright: RaiseTech</small>
     </div>
   </footer>
   <script src="./js/jquery-3.7.1.min.js"></script>

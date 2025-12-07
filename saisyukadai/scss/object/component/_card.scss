@@ -30,39 +30,26 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     @include m.clamp-mobile(gap, 40, 45);
-    padding-top: 32px;
-    padding-right: 16px;
-    @include m.clamp-mobile-reverse(padding-bottom, 44, 40);
-    @include m.clamp-mobile(padding-left, 3, 31);
+    @include m.clamp-mobile-multi(padding, (32 16 42 16), (32 36 42 36));
+    
     background-color: vars.$color-brown-800;
-
+    
     @include m.mq() {
       width: 50%;
       min-height: 0;
-      padding-top: 31px;
     }
-
+    
     @include m.mq(desktop) {
       @include m.clamp-desktop(gap, 45, 60);
-      @include m.clamp-desktop(padding-top, 31, 56);
-      padding-right: 16px;
-      @include m.clamp-desktop(padding-bottom, 40, 60);
-      @include m.clamp-desktop(padding-left, 31, 42);
+      @include m.clamp-desktop-multi(padding, (32 36 42 36), (56 63 60 63));
     }
-
+    
   }
-
+  
   &__body {
     color: vars.$color-white;
-    @include m.clamp-mobile(padding-right, 0, 43);
-    @include m.clamp-mobile-reverse(padding-left, 14, 4);
-
-    @include m.mq(desktop) {
-      @include m.clamp-desktop(padding-right, 43, 88);
-      @include m.clamp-desktop(padding-left, 4, 21);
-    }
+    flex-grow: 1;
   }
 
   &__title {
@@ -87,25 +74,19 @@
   }
 
   &__footer {
-    align-self: center;
+    display: flex;
+    justify-content: center;
   }
 
   &__button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    padding: 11px 42px 14px 41px;
     border-radius: 21px;
-    font-weight: vars.$bold;
-    color: vars.$color-gray-700;
+    padding: 11px 42px 14px 41px;
     line-height: vars.$lh-s;
-    background-color: vars.$color-white;
     text-align: center;
 
     @include m.mq(desktop) {
-      @include m.clamp-desktop-multi(padding, (11 42 14 41), (23 106 20 106));
       @include m.clamp-desktop(border-radius, 21, 38);
+      @include m.clamp-desktop-multi(padding, (11 42 14 41), (23 106 20 106));
       @include m.clamp-desktop(line-height, 17, 33); //px指定
     }
   }

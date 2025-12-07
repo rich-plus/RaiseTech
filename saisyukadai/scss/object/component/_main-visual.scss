@@ -23,6 +23,12 @@
     top: 50%;
     @include m.clamp-mobile(left, 25, 86);
     transform: translateY(-50%);
+
+      font-weight: vars.$bold;
+      @include m.font-size(36);
+      @include m.mq(desktop) {
+        @include m.clamp-desktop(font-size, 36, 40);
+      }
   }
 
 }

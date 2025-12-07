@@ -1,12 +1,14 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
+@use '../component' as *;
 
-.c-footer {
+.p-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   @include m.clamp-mobile-reverse(gap, 70, 44);
+  
   width: 100%;
   min-height: 150px;
   @include m.clamp-mobile(padding-top, 16, 30);
@@ -27,15 +29,14 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    @include m.font-size(18);
-
-    @include m.mq() {
-      @include m.font-size(20);
-    }
   }
 
   &__item {
+      @include m.font-size(18);
 
+      @include m.mq() {
+        @include m.font-size(20);
+      }
     &:not(:last-child)::after {
       content: '|';
       margin: 0 8px;
@@ -49,7 +50,6 @@
   }
 
   &__copy {
-    @include m.font-size(14);
     color: vars.$color-white;
   }
 

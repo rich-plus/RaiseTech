@@ -1,7 +1,8 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
+@use '../component' as *;
 
-.c-header {
+.p-header {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -35,4 +36,5 @@
       @include m.clamp-desktop(width, 287, 325);
     }
   }
+  
 }

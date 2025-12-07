@@ -3,85 +3,45 @@
 
 .c-font {
 
+  // ----------------------------------------
+  // Base styles
+  // ----------------------------------------
+
+  //font weight
   &--bold { font-weight: vars.$bold; }
   &--regular { font-weight: vars.$regular; }
 
+  //font familly
+  &--base { font-family: vars.$font-base; }
+  &--accent { font-family: vars.$font-accent; }
+
+  //line height
+  &--lh-l { line-height: vars.$lh-l; }
+  &--lh-xl { line-height: vars.$lh-xl; }
+
+
   // ----------------------------------------
-  //  Heading（見出し）
+  //  Heading Font Size
   // ----------------------------------------
 
-  &--heading {
-    font-weight: vars.$bold;
-
-    //Heading size XL (41→44→80px) 
-    &-xl {
-      font-family: vars.$fontAccent;
-      @include m.clamp-mobile(font-size, 41, 44);
-      @include m.mq(desktop) { @include m.clamp-desktop(font-size, 44, 80); }
-    }
-
-    //Heading size L (36→60px)
-    &-l { 
-      @include m.clamp-mobile(font-size, 36, 60);
-    }
-
-    //Heading size M (36→40px)
-    &-m {
-      @include m.font-size(36);
-      @include m.mq(desktop) { @include m.clamp-desktop(font-size, 36, 40); }
-    }
-
-    //Heading size XXS (16px)
-    &-xxs { @include m.font-size(16); }
+  &--xl {
+    @extend .c-font--bold;
+    @include m.clamp-mobile(font-size, 36, 60);
   }
 
-  // ----------------------------------------
-  //  SubHeading（小見出し）
-  // ----------------------------------------
-
-  &--subheading {
-    font-weight: vars.$bold;
-    //SubHeading size XL (30→36px) //TOPページ小見出し（Access）
-    &-xl {
-      @include m.font-size(30);
-      @include m.mq(desktop) { @include m.clamp-desktop(font-size, 30, 36); }
-    }
-
-    //SubHeading size L (28→36px)
-    &-l { @include m.clamp-mobile(font-size, 28, 36); }
-
-    //SubHeading size M (24→28px)
-    &-m { @include m.clamp-mobile(font-size, 24, 28); }
-
-    //SubHeading size S (22→24px)
-    &-s { @include m.clamp-mobile(font-size, 22, 24);}
-
-    //SubHeading size XS (20px)
-    &-xs {@include m.font-size(20);}
-
+  &--l {
+    @extend .c-font--bold;
+    @include m.clamp-mobile(font-size, 28, 36);
   }
 
-  // ----------------------------------------
-  //  Body（本文）
-  // ----------------------------------------
-
-  &--body {
-
-    //Text size M (14→16px) //TOPページ本文（Access） 
-    &-m {
-      @include m.font-size(14);
-      line-height: vars.$lh-xl;
-      @include m.mq(desktop) {
-         @include m.font-size(16);
-          line-height: vars.$lh-l;
-        }
-    }
-
-    //Text size S  (16→14→16px) //TOPページ本文（TakeOut EatIn）
-    &-s {
-      @include m.font-size(16);
-      @include m.mq() { @include m.font-size(14); }
-      @include m.mq(desktop) { @include m.font-size(16);}
-    }
+  &--m {
+    @extend .c-font--bold;
+    @include m.clamp-mobile(font-size, 24, 28);
   }
+
+  &--s {
+    @extend .c-font--bold;
+    @include m.font-size(20);
+  }
+
 }

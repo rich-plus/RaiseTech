@@ -5,15 +5,14 @@
 //  Break Point
 // ========================================
 
-
 $breakpoints: (
   'mobile': 'screen and ( min-width: 375px )',
   'tablet': 'screen and ( min-width: 768px )',
   'desktop': 'screen and ( min-width: 1024px )',
 );
 
-@mixin mq( $breakpoint: "tablet" ) {
-  @media #{ map.get( $breakpoints, $breakpoint)}{
+@mixin mq($breakpoint: "tablet") {
+  @media #{ map.get( $breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -29,89 +28,60 @@ $breakpoints: (
 
 
 // ========================================
-//  Clamp Mixins
+//  自動 clamp() 生成ツール（モバイル ↔ デスクトップ）
 // ========================================
 
-// ----------------------------------------
-//  自動 clamp 生成（Mobile）375→767px
-// ----------------------------------------
+// ────────────────────────────────────────
+//  1. 基本 clamp（単一値）（start < end）
+// ──────────────────────────────────────
 
 //$property - font-size / margin / padding / width / gap など
 //$start-px - 初期サイズ（px）
 //$end-px - 終了サイズ（px）
+
+// モバイル（375px → 767px）
 @mixin clamp-mobile($property, $start-px, $end-px) {
   $slope: math.div($end-px - $start-px, 767 - 375); //傾き
   $intercept-rem: math.div($start-px - ($slope * 375), 16); // 切片（rem）
 
-  // clamp生成
-  #{$property}: clamp(
-    #{$start-px}px,
-    calc(#{$intercept-rem}rem + #{$slope * 100}vw),
-    #{$end-px}px
-  );
+  #{$property}: clamp(#{$start-px}px, calc(#{$intercept-rem}rem + #{$slope * 100}vw), #{$end-px}px);
 }
 
-// ----------------------------------------
-//  自動 clamp 生成（PC）1024→1920px
-// ----------------------------------------
-
-//$property - font-size / margin / padding / width / gap など
-//$start-px - 初期サイズ（px）
-//$end-px - 終了サイズ（px）
+// デスクトップ（1024px → 1920px）
 @mixin clamp-desktop($property, $start-px, $end-px) {
-  $slope: math.div($end-px - $start-px, 1920 - 1024); //傾き
-  $intercept-rem: math.div($start-px - ($slope * 1024), 16); // 切片（rem）
+  $slope: math.div($end-px - $start-px, 1920 - 1024);
+  $intercept-rem: math.div($start-px - ($slope * 1024), 16);
 
-  // clamp生成
-  #{$property}: clamp(
-    #{$start-px}px,
-    calc(#{$intercept-rem}rem + #{$slope * 100}vw),
-    #{$end-px}px
-  );
+  #{$property}: clamp(#{$start-px}px, calc(#{$intercept-rem}rem + #{$slope * 100}vw), #{$end-px}px);
 }
 
 
-// ----------------------------------------
-//  自動 逆clamp 生成（Mobile）375→767px
-// ----------------------------------------
+// ────────────────────────────────────────
+//  2. 逆方向 clamp（start > end）
+// ────────────────────────────────────────
 
-//$property - font-size / margin / padding / width / gap など
-//$start-px - 初期サイズ（px）
-//$end-px - 終了サイズ（px）
+// モバイル（375px → 767px）
 @mixin clamp-mobile-reverse($property, $start-px, $end-px) {
-  $slope: math.div($end-px - $start-px, 767 - 375); //傾き
-  $intercept-rem: math.div($start-px - ($slope * 375), 16); // 切片（rem）
+  $slope: math.div($end-px - $start-px, 767 - 375);
+  $intercept-rem: math.div($start-px - ($slope * 375), 16);
 
-  // clamp生成
-  #{$property}: clamp(
-    #{$end-px}px,
-    calc(#{$intercept-rem}rem + #{$slope * 100}vw),
-    #{$start-px}px
-  );
+  #{$property}: clamp(#{$end-px}px, calc(#{$intercept-rem}rem + #{$slope * 100}vw), #{$start-px}px);
 }
 
-// ----------------------------------------
-//  自動 逆clamp 生成（PC）1024→1920px
-// ----------------------------------------
-
-//$property - font-size / margin / padding / width / gap など
-//$start-px - 初期サイズ（px）
-//$end-px - 終了サイズ（px）
+// デスクトップ（1024px → 1920px）
 @mixin clamp-desktop-reverse($property, $start-px, $end-px) {
-  $slope: math.div($end-px - $start-px, 1920 - 1024); //傾き
-  $intercept-rem: math.div($start-px - ($slope * 1024), 16); // 切片（rem）
+  $slope: math.div($end-px - $start-px, 1920 - 1024);
+  $intercept-rem: math.div($start-px - ($slope * 1024), 16);
 
-  // clamp生成
-  #{$property}: clamp(
-    #{$end-px}px,
-    calc(#{$intercept-rem}rem + #{$slope * 100}vw),
-    #{$start-px}px
-  );
+  #{$property}: clamp(#{$end-px}px, calc(#{$intercept-rem}rem + #{$slope * 100}vw), #{$start-px}px);
 }
 
-// ----------------------------------------
-//  自動 clamp padding 生成（Mobile）375→767px
-// ----------------------------------------
+// ────────────────────────────────────────
+//  3. 複数値 clamp （start < end）
+// ────────────────────────────────────────
+
+
+// モバイル（375px → 767px）
 
 /// 1つの clamp 値を生成する関数
 @function fluid-mobile($start-px, $end-px) {
@@ -123,25 +93,22 @@ $breakpoints: (
 
 /// 複数値対応 clamp
 @mixin clamp-mobile-multi($property, $mobile-values, $tablet-values) {
-  $mobile-list: if(type-of($mobile-values) == number, ($mobile-values), $mobile-values);
-  $tablet-list: if(type-of($tablet-values) == number, ($tablet-values), $tablet-values);
+  $mobile-list: if(type-of($mobile-values)==number, ($mobile-values), $mobile-values);
+  $tablet-list: if(type-of($tablet-values)==number, ($tablet-values), $tablet-values);
 
   $result: ();
 
-  @for $i from 1 through length($mobile-list) {
-    $min: nth($mobile-list, $i);
-    $max: nth($tablet-list, $i);
-    $result: append($result, fluid-mobile($min, $max), space); 
-  }
-
-  #{$property}: $result;
+@for $i from 1 through length($mobile-list) {
+  $min: nth($mobile-list, $i);
+  $max: nth($tablet-list, $i);
+  $result: append($result, fluid-mobile($min, $max), space);
 }
 
-// ----------------------------------------
-//  自動 clamp padding 生成（PC）1024→1920px
-// ----------------------------------------
+#{$property}: $result;
+}
 
-/// 1つの clamp 値を生成する関数
+
+// デスクトップ（1024px → 1920px）
 @function fluid-desktop($start-px, $end-px) {
   $slope: math.div($end-px - $start-px, 1920 - 1024);
   $base: $start-px - $slope * 1024;
@@ -149,18 +116,50 @@ $breakpoints: (
   @return clamp(#{$start-px}px, #{$base / 16}rem + #{$slope * 100}vw, #{$end-px}px);
 }
 
-/// 複数値対応 clamp
 @mixin clamp-desktop-multi($property, $tablet-values, $desktop-values) {
-  $tablet-list: if(type-of($tablet-values) == number, ($tablet-values), $tablet-values);
-  $desktop-list: if(type-of($desktop-values) == number, ($desktop-values), $desktop-values);
+  $tablet-list: if(type-of($tablet-values)==number, ($tablet-values), $tablet-values);
+  $desktop-list: if(type-of($desktop-values)==number, ($desktop-values), $desktop-values);
 
   $result: ();
 
-  @for $i from 1 through length($tablet-list) {
-    $min: nth($tablet-list, $i);
-    $max: nth($desktop-list, $i);
-    $result: append($result, fluid-desktop($min, $max), space); 
-  }
-
-  #{$property}: $result;
+@for $i from 1 through length($tablet-list) {
+  $min: nth($tablet-list, $i);
+  $max: nth($desktop-list, $i);
+  $result: append($result, fluid-desktop($min, $max), space);
 }
+
+#{$property}: $result;
+}
+
+// ──────────────────────────────────────────────
+//  Clamp Mixin 使用例
+// ──────────────────────────────────────────────
+
+//  【例1】フォントサイズなどをレスポンシブに変化させる
+//  375px → 767px：24px → 36px
+//  1024px → 1920px：36px → 48px
+
+// .title {
+//   @include clamp-mobile(font-size, 24, 36);
+//   @include clamp-desktop(font-size, 36, 48);
+// }
+
+
+//  【例2】逆方向にフォントサイズなどを変化させる（大 → 小）
+//  375px → 767px：48px → 36px
+//  1024px → 1920px：36px → 24px
+
+// .title {
+//   @include clamp-mobile-reverse(font-size, 48, 36);
+//   @include clamp-desktop-reverse(font-size, 36, 24);
+// }
+
+
+//  【例3】padding など 4値をまとめてレスポンシブ化
+//  375px → 767px：20 16 40 16 → 40 32 60 32
+//  1024px → 1920px：40 32 60 32 → 60 40 80 40
+
+// .section {
+//    @include clamp-mobile-multi(padding, (20 16 40 16), (40 32 60 32));
+//    @include clamp-desktop-multi(padding, (40 32 60 32), (60 40 80 40));
+// }
