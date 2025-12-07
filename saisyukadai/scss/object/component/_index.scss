@@ -1,11 +1,11 @@
 // Base（基礎設定）
 @forward "font";
 @forward "color";
+@forward "border";
 @forward "layout";
 
 // Layout（ページ構成）
-@forward "main-visual";
-@forward "hero";
+@forward "visual";
 
 // UI Components（パーツ）
 @forward "underline";

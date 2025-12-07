@@ -32,9 +32,7 @@
     flex-direction: column;
     @include m.clamp-mobile(gap, 40, 45);
     @include m.clamp-mobile-multi(padding, (32 16 42 16), (32 36 42 36));
-    
-    background-color: vars.$color-brown-800;
-    
+        
     @include m.mq() {
       width: 50%;
       min-height: 0;
@@ -48,7 +46,6 @@
   }
   
   &__body {
-    color: vars.$color-white;
     flex-grow: 1;
   }
 

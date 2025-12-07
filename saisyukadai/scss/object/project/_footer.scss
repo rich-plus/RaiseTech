@@ -40,17 +40,8 @@
     &:not(:last-child)::after {
       content: '|';
       margin: 0 8px;
-      color: vars.$color-white;
     }
 
-  }
-
-  &__link {
-    color: vars.$color-white;
-  }
-
-  &__copy {
-    color: vars.$color-white;
   }
 
 }

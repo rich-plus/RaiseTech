@@ -8,6 +8,6 @@
   &::after {
     content: '';
     display: block;
-    background-color: currentColor;// 親要素の文字色を継承
+    background-color: currentColor; // 親要素の文字色を継承
   }
 }

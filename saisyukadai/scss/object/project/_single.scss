@@ -3,10 +3,15 @@
 @use '../component' as *;
 
 .p-single {
-  .c-main-visual {
+
+  &__mv {
     @include m.clamp-mobile(height, 225, 500);
 
-    &__title {
+    &-img {
+      object-position: 50% 55%;
+    }
+
+    &-title {
       left: 0;
 
       @include m.mq(mobile) {

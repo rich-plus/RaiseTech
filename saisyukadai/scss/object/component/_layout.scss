@@ -26,9 +26,8 @@
     justify-content: center;
     gap: 20px;
     @include m.clamp-mobile(padding-top, 20, 40);
-    @include m.clamp-mobile(padding-right, 20, 40);
+    @include m.clamp-mobile(padding-inline, 20, 40);
     @include m.clamp-mobile-reverse(padding-bottom, 49, 40);
-    @include m.clamp-mobile(padding-left, 20, 40);
 
     @include m.mq() {
       flex-direction: row;
@@ -36,10 +35,7 @@
     }
 
     @include m.mq(desktop) {
-      @include m.clamp-desktop(padding-top, 40, 120);
-      @include m.clamp-desktop(padding-right, 40, 120);
-      @include m.clamp-desktop(padding-bottom, 40, 130);
-      @include m.clamp-desktop(padding-left, 40, 120);
+      @include m.clamp-desktop-multi(padding, (40 40 40 40), (120 120 130 120));
     }
   }
 
@@ -48,18 +44,6 @@
     @include m.mq(desktop) {
       flex: 1.92;
       min-width: 230px;
-    }
-  }
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    @include m.mq() {
-      flex-direction: row;
-      align-items: center;
-      gap: 19px;
     }
   }
 

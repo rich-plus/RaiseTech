@@ -14,8 +14,6 @@
   
   padding: 178px 20px 84px 46px;
   overflow-y: auto;
-  color: vars.$color-gray-700;
-  background-color: vars.$color-beige-100;
 
   @include m.mq(mobile) {
     @include m.clamp-mobile(width, 328, 367);
@@ -38,7 +36,6 @@
 
 
   &__title {
-    font-family: vars.$font-accent;
     @include m.clamp-mobile(font-size, 20, 34);
     font-weight: vars.$bold;
     display: none;
@@ -91,7 +88,6 @@
   &__overlay {
     position: fixed;
     inset: 0;
-    background: vars.$overlay-black-50;
     opacity: 0;
     pointer-events: none;
     transition: opacity 300ms ease-out;

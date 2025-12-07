@@ -22,7 +22,7 @@
 <body>
   <div class="c-layout__wrapper">
     <div class="c-layout__wrapper-inner">
-      <header class="l-header">
+      <header class="l-header c-color--bg-tertiary">
         <div class="p-header">
           <a class="p-header__logo" href="/index.html">
             <img src="./images/logo/logo.png" alt="ハンバーガーショップ">
@@ -32,24 +32,24 @@
             <label for="search" class="u-visually-hidden">
               サイト内検索
             </label>
-            <input type="search" id="search" name="s" class="c-search__input" aria-label="検索キーワードを入力">
+            <input type="search" id="search" name="s" class="c-search__input c-font--bold c-color--text-secondary c-border--primary-1" aria-label="検索キーワードを入力">
             <button type="submit" class="c-search__button c-button--grad c-color--text-secondary">検索</button>
           </form>
         </div>
         <!-- Menuボタン（Tablet/Mobile） -->
-        <button type="button" class="c-hamburger js-hamburger">
+        <button type="button" class="c-hamburger c-font--accent c-color--text-secondary js-hamburger">
           <span class="c-hamburger__menu">Menu</span>
         </button>
       </header>
 
       <main class="l-main">
-        <section class="c-main-visual">
+        <section class="c-visual c-visual--center-y p-mv">
           <picture>
             <source srcset="./images/top/mv--pc.jpg" media="( min-width: 1024px )">
             <source srcset="./images/top/mv--tb.jpg" media="( min-width: 768px )">
-            <img class="c-main-visual__img" src="./images/top/mv--sp.jpg" alt="ハンバーガーショップのメインビジュアル画像">
+            <img class="c-visual__img p-mv__img" src="./images/top/mv--sp.jpg" alt="ハンバーガーショップのメインビジュアル画像">
           </picture>
-          <h1 class="c-main-visual__title c-color--text-inverse">ダミーサイト</h1>
+          <h1 class="c-visual__title p-mv__title c-color--text-inverse">ダミーサイト</h1>
         </section>
 
         <div class="c-layout__container">
@@ -107,9 +107,9 @@
     </div>
 
     <aside class="l-aside c-layout__aside">
-      <nav class="p-sidemenu" aria-label="サイドメニュー">
+      <nav class="p-sidemenu c-color--text-secondary c-color--bg-secondary" aria-label="サイドメニュー">
         <!-- Menu (PC) -->
-        <h2 class="p-sidemenu__title">Menu</h2>
+        <h2 class="p-sidemenu__title c-font--accent">Menu</h2>
 
         <!-- Menu List (共通) -->
         <ul class="p-sidemenu__nav-list">
@@ -181,12 +181,12 @@
           </li>
         </ul>
       </nav>
-      <div class="p-sidemenu__overlay"></div>
+      <div class="p-sidemenu__overlay c-color--bg-overlay-black-50"></div>
     </aside>
   </div>
 
   <footer class="l-footer">
-    <div class="p-footer">
+    <div class="p-footer c-color--text-inverse">
       <nav class="p-footer__nav" aria-label="フッターメニュー">
         <ul class="p-footer__nav-list">
           <li class="p-footer__item"><a href="/page.html" class="p-footer__link js-fade-link">ショップ情報</a></li>

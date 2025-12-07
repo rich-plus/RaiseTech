@@ -4,8 +4,6 @@
 .c-pagination {
   margin: 30px 20px;
 
-  color: vars.$color-gray-700;
-
   @include m.mq() {
     margin: 32px 0px;
   }
@@ -47,15 +45,6 @@
     @include m.mq() {
       display: flex;
       gap: 15px;
-
-      & li:first-child {
-        .c-pagination__item {
-          @include m.mq() {
-            color: vars.$color-white;
-            background-color: vars.$color-brown-800;
-          }
-        }
-      }
     }
   }
 
@@ -66,8 +55,6 @@
       align-items: center;
       width: 35px;
       height: 35px;
-
-      border: 1px solid vars.$color-gray-700;
     }
   }
 

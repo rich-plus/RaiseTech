@@ -2,14 +2,10 @@
 @use '../../foundation/variables' as vars;
 @use "sass:math";
 
-$btnWidth: 45.25px;
-$btnHeight: 6px;
 
 .c-hamburger {
-  font-family: vars.$font-accent;
   @include m.clamp-mobile(font-size, 20, 34);
   font-weight: vars.$bold;
-  color: vars.$color-gray-700;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -32,9 +28,9 @@ $btnHeight: 6px;
     &::after {
       content: '';
       position: absolute;
-      width: $btnWidth;
-      height: $btnHeight;
-      background: vars.$color-gray-700;
+      width: vars.$btn-width;
+      height: vars.$btn-height;
+      background: currentColor;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
@@ -47,7 +43,7 @@ $btnHeight: 6px;
       transform: translate(-50%, -50%) rotate(-45deg);
     }
 
-    > span {
+    &__span {
       background: none;
     }
   }

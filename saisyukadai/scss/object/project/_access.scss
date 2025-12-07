@@ -74,15 +74,14 @@
 
     @include m.mq(desktop) {
       @include m.clamp-desktop(gap, 14, 58.5);
-      @include m.clamp-desktop(padding-top, 42, 86);
+      @include m.clamp-desktop-multi(padding-block, (42 40), (86 75));
       padding-right: 47.5%; 
-      @include m.clamp-desktop(padding-bottom, 40, 75);
       @include m.clamp-desktop(padding-left, 42, 119);
     }
   }
 
   &__title {
-font-weight: vars.$bold;
+      font-weight: vars.$bold;
       @include m.font-size(30);
 
       @include m.mq(desktop) {

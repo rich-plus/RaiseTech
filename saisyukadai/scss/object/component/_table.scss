@@ -10,7 +10,6 @@
     height: 77px;
     padding-block: 28px 24px;
     @include m.clamp-mobile(padding-left, 23, 30);
-    border: 1px solid vars.$color-gray-700;
 
     &:first-child {
       @include m.clamp-mobile(width, 140, 215);

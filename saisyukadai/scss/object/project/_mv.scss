@@ -1,28 +1,19 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
-.c-main-visual {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+.p-mv {
   height: 285px;
+
   @include m.mq(desktop) {
     @include m.clamp-desktop(height, 285, 530);
   }
   
   &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: 50% 55%;
-    display: block;
   }
   
   &__title {
-    position: absolute;
-    top: 50%;
     @include m.clamp-mobile(left, 25, 86);
-    transform: translateY(-50%);
 
       font-weight: vars.$bold;
       @include m.font-size(36);

@@ -17,8 +17,8 @@
   // Background Colors
   &--bg-primary { background-color: vars.$color-cream-50; } //サイト全体の背景
   &--bg-secondary { background-color: vars.$color-beige-100; } //サイドメニュー背景
-  &--bg-tertiary { color: vars.$color-cream-50; } //ヘッダー背景
-  &--bg-accent { background-color: vars.$color-brown-800; } //ページネーション
+  &--bg-tertiary { background-color: vars.$color-cream-100; } //ヘッダー背景
+  &--bg-accent { background-color: vars.$color-brown-800; } //カード、ページネーション
   &--bg-muted {   background-color: vars.$color-gray-100; } //控えめな背景 //muted=落ち着いた色合い
   &--bg-surface { background-color: vars.$color-white; } //白背景 //surface＝表面
 
@@ -27,6 +27,5 @@
   &--bg-overlay-black-50 {background-color: vars.$overlay-black-50;} //黒透過背景50%
   &--bg-overlay-black-40 {background-color: vars.$overlay-black-40;} //黒透過背景40%
   &--bg-overlay-black-30 {background-color: vars.$overlay-black-30;} //黒透過背景30%
-
   
 }

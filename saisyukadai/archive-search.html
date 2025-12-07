@@ -22,7 +22,7 @@
 <body>
   <div class="c-layout__wrapper">
     <div class="c-layout__wrapper-inner">
-      <header class="l-header">
+      <header class="l-header c-color--bg-tertiary">
         <div class="p-header">
           <a class="p-header__logo" href="/index.html">
             <img src="./images/logo/logo.png" alt="ハンバーガーショップ">
@@ -32,27 +32,27 @@
             <label for="search" class="u-visually-hidden">
               サイト内検索
             </label>
-            <input type="search" id="search" name="s" class="c-search__input" aria-label="検索キーワードを入力">
+            <input type="search" id="search" name="s" class="c-search__input c-font--bold c-color--text-secondary c-border--primary-1" aria-label="検索キーワードを入力">
             <button type="submit" class="c-search__button c-button--grad c-color--text-secondary">検索</button>
           </form>
         </div>
         <!-- Menuボタン（Tablet/Mobile） -->
-        <button type="button" class="c-hamburger js-hamburger">
+        <button type="button" class="c-hamburger c-font--accent c-color--text-secondary js-hamburger">
           <span class="c-hamburger__menu">Menu</span>
         </button>
       </header>
 
       <main class="l-main p-archive">
-        <section class="c-hero">
+        <section class="c-visual c-visual--center-y p-hero">
           <picture>
             <source srcset="./images/archive/archive--pc.jpg" media="( min-width: 1024px )">
             <source srcset="./images/archive/archive--tb.jpg" media="( min-width: 768px )">
-            <img class="c-hero__img" src="./images/archive/archive--sp.jpg" alt="">
+            <img class="c-visual__img p-hero__img" src="./images/archive/archive--sp.jpg" alt=""> <!-- alt空欄 -->
           </picture>
-          <div class="c-hero__overlay c-color--bg-overlay-black-50"></div>
-          <div class="c-hero__content c-layout__inner c-color--text-inverse">
-            <h1 class="c-hero__title c-font--xl">Search:</h1>
-            <h2 class="c-hero__subtitle c-font--s">チーズバーガー</h2>
+          <div class="p-hero__overlay c-color--bg-overlay-black-50"></div>
+          <div class="c-visual__content p-hero__content c-layout__inner c-color--text-inverse">
+            <h1 class="p-hero__title c-font--xl">Search:</h1>
+            <h2 class="p-hero__subtitle c-font--s">チーズバーガー</h2>
           </div>
         </section>
 
@@ -70,8 +70,8 @@
                 <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
                 <img class="c-card__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
               </picture>
-              <div class="c-card__content">
-                <div class="c-card__body">
+              <div class="c-card__content c-color--bg-accent">
+                <div class="c-card__body c-color--text-inverse">
                   <h3 class="c-card__title">チーズバーガー</h3>
                   <h4 class="c-card__subtitle">小見出しが入ります</h4>
                   <p class="c-card__text">
@@ -89,8 +89,8 @@
                 <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
                 <img class="c-card__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
               </picture>
-              <div class="c-card__content">
-                <div class="c-card__body">
+              <div class="c-card__content c-color--bg-accent">
+                <div class="c-card__body c-color--text-inverse">
                   <h3 class="c-card__title">チーズバーガー</h3>
                   <h4 class="c-card__subtitle">小見出しが入ります</h4>
                   <p class="c-card__text">
@@ -108,8 +108,8 @@
                 <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
                 <img class="c-card__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
               </picture>
-              <div class="c-card__content">
-                <div class="c-card__body">
+              <div class="c-card__content c-color--bg-accent">
+                <div class="c-card__body c-color--text-inverse">
                   <h3 class="c-card__title">チーズバーガー</h3>
                   <h4 class="c-card__subtitle">小見出しが入ります</h4>
                   <p class="c-card__text">
@@ -127,8 +127,8 @@
                 <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
                 <img class="c-card__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
               </picture>
-              <div class="c-card__content">
-                <div class="c-card__body">
+              <div class="c-card__content c-color--bg-accent">
+                <div class="c-card__body c-color--text-inverse">
                   <h3 class="c-card__title">チーズバーガー</h3>
                   <h4 class="c-card__subtitle">小見出しが入ります</h4>
                   <p class="c-card__text">
@@ -146,8 +146,8 @@
                 <source srcset="./images/archive/card--tb.jpg" media="( min-width: 768px )">
                 <img class="c-card__img" src="./images/archive/card--sp.jpg" alt="チーズバーガー">
               </picture>
-              <div class="c-card__content">
-                <div class="c-card__body">
+              <div class="c-card__content c-color--bg-accent">
+                <div class="c-card__body c-color--text-inverse">
                   <h3 class="c-card__title">チーズバーガー</h3>
                   <h4 class="c-card__subtitle">小見出しが入ります</h4>
                   <p class="c-card__text">
@@ -162,21 +162,21 @@
           </div>
         </section>
 
-        <nav class="c-pagination">
+        <nav class="c-pagination c-color--text-secondary">
           <!-- PC/Tablet : 数字あり -->
           <div class="c-pagination__numbers">
             <span class="c-pagination__info">page 1 / 10</span>
             <a href="" class="c-pagination__prev"><img src="./images/archive/laquo.svg" alt="前のページへ"></a>
             <ul class="c-pagination__list">
-              <li><a href="" class="c-pagination__item" aria-current="page" aria-label="現在のページ、1ページ目">1</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="2ページ目へ">2</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="3ページ目へ">3</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="4ページ目へ">4</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="5ページ目へ">5</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="6ページ目へ">6</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="7ページ目へ">7</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="8ページ目へ">8</a></li>
-              <li><a href="" class="c-pagination__item" aria-label="9ページ目へ">9</a></li>
+              <li><a href="" class="c-pagination__item c-color--text-inverse c-color--bg-accent c-border--primary-1" aria-current="page" aria-label="現在のページ、1ページ目">1</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="2ページ目へ">2</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="3ページ目へ">3</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="4ページ目へ">4</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="5ページ目へ">5</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="6ページ目へ">6</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="7ページ目へ">7</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="8ページ目へ">8</a></li>
+              <li><a href="" class="c-pagination__item c-border--primary-1" aria-label="9ページ目へ">9</a></li>
             </ul>
             <a href="" class="c-pagination__next"><img src="./images/archive/raquo.svg" alt="前のページへ"></a>
           </div>
@@ -192,9 +192,9 @@
     </div>
 
     <aside class="l-aside c-layout__aside">
-      <nav class="p-sidemenu" aria-label="サイドメニュー">
+      <nav class="p-sidemenu c-color--text-secondary c-color--bg-secondary" aria-label="サイドメニュー">
         <!-- Menu (PC) -->
-        <h2 class="p-sidemenu__title">Menu</h2>
+        <h2 class="p-sidemenu__title c-font--accent">Menu</h2>
 
         <!-- Menu List (共通) -->
         <ul class="p-sidemenu__nav-list">
@@ -266,12 +266,12 @@
           </li>
         </ul>
       </nav>
-      <div class="p-sidemenu__overlay"></div>
+      <div class="p-sidemenu__overlay c-color--bg-overlay-black-50"></div>
     </aside>
   </div>
 
   <footer class="l-footer">
-    <div class="p-footer">
+    <div class="p-footer c-color--text-inverse">
       <nav class="p-footer__nav" aria-label="フッターメニュー">
         <ul class="p-footer__nav-list">
           <li class="p-footer__item"><a href="/page.html" class="p-footer__link js-fade-link">ショップ情報</a></li>
