@@ -1,16 +1,15 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
+@use '../component' as *;
 
 // =====================================================
 //  Search Form （サイト内検索フォーム）
 // =====================================================
 //  ・縦並び → 375px以上で横並び
 //  ・入力欄に虫眼鏡アイコン表示
-//  ・文字色・枠線は、HTML側（Component）で指定。
-//  ・検索ボタンのサイズ・角丸は、 &__button で設定。
 // ─────────────────────────────────────────────────────
 
-.c-search {
+.p-search {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +42,7 @@
     background-size: 24px 24px;
   }
 
-  &__button {
+  .c-button--grad {
     border-radius: 10px;
     @include m.clamp-mobile(width, 90, 136);
     height: 46px;
