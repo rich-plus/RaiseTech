@@ -1,6 +1,10 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ========================================
+//  List (箇条書き・番号付きリスト)
+// ========================================
+
 .c-list {
   display: flex;
   flex-direction: column;

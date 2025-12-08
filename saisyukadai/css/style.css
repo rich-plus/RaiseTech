@@ -108,7 +108,7 @@ a {
   background-color: rgba(0, 0, 0, 0.3116);
 }
 
-.c-border--primary-1 {
+.c-border--primary {
   border: 1px solid #707070;
 }
 
@@ -415,7 +415,6 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid 1px solid #707070;
 }
 .c-media__article-right {
   display: grid;

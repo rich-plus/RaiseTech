@@ -1,6 +1,12 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ============================================
+//  Grid
+// ============================================
+//  ・画面幅に応じて自動でカラム数調整。
+// ────────────────────────────────────────────
+
 .c-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

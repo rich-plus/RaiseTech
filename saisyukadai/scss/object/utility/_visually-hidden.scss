@@ -1,6 +1,10 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// =============================================
+//  Visually Hidden（画面非表示・読み上げ対応）
+// =============================================
+
 .u-visually-hidden {
   position: absolute;
   width: 1px;

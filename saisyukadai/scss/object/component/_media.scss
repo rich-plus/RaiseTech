@@ -1,13 +1,20 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// =============================================================
+//  Media（画像・テキスト配置）
+// =============================================================
+//   ・article-right → 画像左・テキスト右（42.8% : 残り）
+//   ・article-left  → テキスト左・画像右（残り : 42.8%）
+//   ・center        → 画像中央寄せ
+// ─────────────────────────────────────────────────────────────
+
 .c-media {
 
   &__img {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid vars.$border-gray-700-1;
 
   }
 

@@ -2,6 +2,10 @@
 @use '../../foundation/variables' as vars;
 @use '../component' as *;
 
+// ========================================
+//  Header（共通ヘッダー）
+// ========================================
+
 .p-header {
   display: flex;
   align-items: center;

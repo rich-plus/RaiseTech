@@ -1,6 +1,13 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ============================================================
+//  Visual （メインビジュアル・ヒーロー画像）
+// ============================================================
+//  ・共通スタイルのみ定義。
+//  ・高さや画像の表示位置は、Component / Project 側で個別に設定。
+// ────────────────────────────────────────────────────────────
+
 .c-visual {
   position: relative;
   overflow: hidden;
@@ -16,6 +23,7 @@
     position: absolute;
   }
 
+  //テキストは縦中央配置
   &--center-y { 
     .c-visual__content,
     .c-visual__title {

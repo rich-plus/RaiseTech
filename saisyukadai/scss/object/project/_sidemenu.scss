@@ -2,6 +2,10 @@
 @use '../../foundation/variables' as vars;
 @use '../component' as *;
 
+// ========================================
+//  Side Menu（共通サイドメニュー）
+// ========================================
+
 .p-sidemenu {
   //サイドメニューを右に隠す
   position: fixed;

@@ -1,25 +1,41 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
-// ----------------------------------------
-//  Color Component
-// ----------------------------------------
+// ===============================================
+//  Color (文字色・背景色・オーバーレイ)
+// ===============================================
+// 命名規則：
+//   文字色 → c-color--text-[役割]
+//   背景色 → c-color--bg-[役割]
+//   透過背景 → c-color--bg-overlay-[色]-[透明度]
+//
+// 役割名：
+//   primary   = 主要色（ベースカラー）
+//   secondary = ２番目（メインカラー）
+//   tertiary  = ３番目 (サブカラー)
+//   accent    = 強調色
+//   muted     = 控えめな色
+//   surface   = 標準の白背景（カード内ボタン、入力欄など）
+//   inverse   = 反転色（暗背景上の明るい文字）
+//   link      = リンク・出典用
+// ────────────────────────────────────────────────
+
 
 .c-color {
   // Text Colors
-  &--text-primary { color: vars.$color-brown-900; } //メインテキスト //主要色=primary
-  &--text-secondary { color: vars.$color-gray-700; } //サブテキスト //副次的な二次色=secondary
-  &--text-tertiary { color: vars.$color-gray-200; } //副次的な三次色=tertiary
+  &--text-primary { color: vars.$color-brown-900; } //メインテキスト
+  &--text-secondary { color: vars.$color-gray-700; } //サブテキスト
+  &--text-tertiary { color: vars.$color-gray-200; } //TakeOutタイトル
   &--text-link { color: vars.$color-blue-700; } // 出典リンク
-  &--text-inverse { color: vars.$color-white; } //白文字＝暗い背景　//inverse＝反転
+  &--text-inverse { color: vars.$color-white; } //フッター、画像上タイトル、カード内テキスト、ページネーション
 
   // Background Colors
   &--bg-primary { background-color: vars.$color-cream-50; } //サイト全体の背景
   &--bg-secondary { background-color: vars.$color-beige-100; } //サイドメニュー背景
   &--bg-tertiary { background-color: vars.$color-cream-100; } //ヘッダー背景
-  &--bg-accent { background-color: vars.$color-brown-800; } //カード、ページネーション
-  &--bg-muted {   background-color: vars.$color-gray-100; } //控えめな背景 //muted=落ち着いた色合い
-  &--bg-surface { background-color: vars.$color-white; } //白背景 //surface＝表面
+  &--bg-accent { background-color: vars.$color-brown-800; } //カード、ページネーション背景
+  &--bg-muted { background-color: vars.$color-gray-100; } //引用、コード背景
+  &--bg-surface { background-color: vars.$color-white; } //カード内ボタン
 
   // Overlay Colors
   &--bg-overlay-white-80 {background-color: vars.$overlay-white-80;} //白透過背景

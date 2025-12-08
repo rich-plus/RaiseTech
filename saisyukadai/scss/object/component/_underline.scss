@@ -1,6 +1,12 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ========================================================
+//  Underline
+// ========================================================
+//  ・下線の太さ・位置は、Component / Project 側で個別に設定。
+// ────────────────────────────────────────────────────────
+
 .c-underline {
   position: relative;
   display: inline-block;

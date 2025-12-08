@@ -1,6 +1,13 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ========================================
+//  Blockquote (引用デザイン用) 
+// ========================================
+//  ・出典リンクのみ下線を付与。
+//  ・タイポグラフィ・背景色は、HTML側（Component）で指定。
+// ────────────────────────────────────────
+
 .c-blockquote {
   display: flex;
   flex-direction: column;
@@ -15,7 +22,6 @@
   &__link {
     text-decoration: underline;
   }
-  
 }
 
  

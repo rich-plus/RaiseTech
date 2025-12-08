@@ -2,6 +2,9 @@
 @use '../../foundation/variables' as vars;
 @use '../component' as *;
 
+// ===============================================
+//  Menu Card（トップページのカード：TakeOutとEatIn）
+// ===============================================
 
 .p-menu-card {
   display: flex;

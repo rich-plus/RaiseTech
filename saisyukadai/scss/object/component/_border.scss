@@ -1,6 +1,10 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ========================================
+//  Border (枠線)
+// ========================================
+
  .c-border {
-   &--primary-1 { border: vars.$border-gray-700-1; } 
+   &--primary { border: vars.$border-gray-700-1; } 
  }

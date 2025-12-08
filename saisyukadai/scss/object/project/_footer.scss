@@ -2,6 +2,10 @@
 @use '../../foundation/variables' as vars;
 @use '../component' as *;
 
+// ========================================
+//  Footer（共通フッター）
+// ========================================
+
 .p-footer {
   display: flex;
   flex-direction: column;

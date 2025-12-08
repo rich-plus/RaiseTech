@@ -1,6 +1,12 @@
 @use '../../foundation/mixin' as m;
 @use '../../foundation/variables' as vars;
 
+// ============================================
+//  Code Block（コード表示用）
+// ============================================
+//  ・タイポグラフィ・背景色は、HTML側（Component）で指定。
+// ────────────────────────────────────────────
+
 .c-code {
   padding-block: 50px;
   padding-left: 50px;
