@@ -1,2 +1,2 @@
 # RaiseTech
-This is the GitHub repository for assignments at RaiseTech.
+Static site coding for a hamburger shop website.
