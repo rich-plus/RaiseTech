@@ -150,7 +150,7 @@ a {
   }
 }
 @media screen and ( min-width: 1024px ) {
-  .c-layout__aside {
+  .c-layout__sidebar {
     flex: 1.92;
     min-width: 230px;
   }
